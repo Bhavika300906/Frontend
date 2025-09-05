@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- pattern :- [A-Za-z0-9]{} -->
+
+    <table align="center"> 
+        <form action="" >
+
+            <tr>
+                <td><label for="">Enter your name</label></td>
+                <!-- <td><input type="text" placeholder="Enter your name" pattern="[A-Za-z]+" required title="Name" value=""></td> -->
+                <td><input type="text" placeholder="Enter your name" pattern="[A-Za-z]{3,8}" required title="Name" value=""></td>
+            </tr>
+            <tr>
+                <td> <label for="">Enter your surname</label></td>
+                <td> <input type="text" pattern="[A-Za-z]{3,8}" required placeholder="Enter your surname"></td>
+            </tr>
+           
+            <tr>
+                <td><label for="">Enter your Email</label></td>
+                <td><input type="email" required placeholder="Enter your Email"></td>
+            </tr>
+           <tr>
+            <td><label for="">Enter your number</label></td>
+            <td><input type="tel" pattern="[6-9][0-9]{9}" maxlength="10" required placeholder="Enter your number"></td>
+           </tr>
+           <tr>
+            <!-- number alteadt 1 -->
+            <td><label for="">Enter your Password</label></td>
+            <td><input type="password" pattern="[A-Z][a-z0-9]{7,12}" required placeholder="Enter your Password"></td>
+           </tr>
+            <tr>
+            <td><label for="">Enter Quntity</label></td>
+            <td><input type="number" min="1" max="6" required placeholder="Enter Quntity"></td>
+           </tr>
+          
+           <tr>
+            <td> <input type="submit"></td>
+           </tr>
+
+        </form>
+    </table>
+</body>
+</html>
