@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Zoom</title>
+  <style>
+    .card {
+      width: 350px;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* background layer */
+    .bg {
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("https://p.w3layouts.com/demos_new/template_demo/08-09-2021/introdos-liberty-demo_Free/185442563/web/assets/images/g8.jpg");
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s;
+    }
+
+    /* zoom only background */
+    .card:hover .bg {
+      transform: scale(1.2);
+    }
+
+    /* text stays fixed */
+    .text {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 20px;
+
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="card">
+    <div class="bg">
+    <div class="text">
+        LIVING
+        <br>Meet the new creativity
+    </div>
+    </div>
+  </div>
+
+</body>
+</html>

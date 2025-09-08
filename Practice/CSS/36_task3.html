@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .over{
+             height: 300px;
+             width: 470px;
+             overflow: hidden;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            border: 2px solid;
+            background: url("https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom1.jpg");
+            background-size: 100% 100%;
+            transform: translateX(-20px);
+            transition: .7s;
+        }
+        .border{
+            height: 200px;
+            width: 400px;
+            border: 5px solid white;
+            margin: 50px auto;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            letter-spacing: 7px;
+            text-align: right;
+            line-height: 200px;
+            transform: translateX(-20px);
+             transition: .7s;
+             opacity: 0;
+        }
+        .main:hover{
+            transform: translateX(0px);
+        }
+        .main:hover .border{
+             transform: translateX(-10px);
+             opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="over">
+         <div class="main">
+        <div class="border">    
+                New Arrivals
+        </div>
+    </div>
+    </div>
+</body>
+</html>
