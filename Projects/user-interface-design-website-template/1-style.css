@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utility reuse */
+.container {
+    width: 90%;
+    margin: 0% auto;
+}
+
+/* header start */
+#header {
+    height: 600px;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.logo {
+    font-size: 20px;
+    color: rgb(151, 245, 29);
+}
+
+.list-ul .nav-list {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.nav-list .nav-a {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Oswald";
+    text-decoration: none;
+}
+
+.logo-2 {
+    font-size: 20px;
+    color: rgb(151, 245, 29);
+}
+
+/* .h2-UI {
+    display: flex;
+    font-size: 132px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Krub";
+}
+
+.h4-beginners {
+    display: flex;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Krub";
+    padding: 10px;
+    transform: rotate(90deg);
+    transform-origin: left top;
+}
+
+.p-subtitle-1 {
+    margin: 10px 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Krub"
+}
+
+.p-body-text {
+    font-size: 14px;
+    width: 500px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Krub";
+    padding: 10px 20px;
+
+}
+
+.btn-1 {
+    margin: auto 20px;
+    display: flex;
+    justify-content: right;
+}
+
+.btn-1 .header-btn {
+    font-size: 12px;
+    color: #f0e5df;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+    background-color: rebeccapurple;
+    padding: 10px 20px;
+}
+
+.btn-1 .header-btn-1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: transparent;
+    font-weight: 700;
+    border: none;
+    font-family: "Oswald";
+    padding: 10px 20px;
+}
+
+.man-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.bg-circle {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    background: #8a2be2;
+    border-radius: 50%;
+    position: absolute;
+} */
+
+
+/* sec1 start */
+#sec1 {
+    background-color: black;
+}
+
+#sec1 .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sec1 .h2-UI {
+    font-size: 132px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Krub";
+}
+
+#sec1 .h4-beginners {
+    font-size: 43px;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 10px;
+    transform: rotate(90deg);
+    transform-origin: left top;
+    transform: rotate(90deg);
+    font-family: "Krub";
+}
+
+#sec1.man-image {
+    display: inline;
+    font-size: 17px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#sec1 .bg-circle {
+    display: flex;
+    position: absolute;
+    width: 350px;
+    justify-content: center;
+    height: 350px;
+    background: #8a2be2;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#sec1 .p-subtitle-1 {
+    display: flex;
+    margin: 30px 10px 200px 10px;
+    justify-content: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Krub";
+}
+
+#sec1 .p-body-text {
+    width: 660px;
+    margin: 350px 10px 200px 10px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Krub";
+    text-align: left;
+}
+
+#sec .header-btn {
+    width: 125px;
+    height: 47px;
+    background-color: #a460f9;
+}
+
+#sec .header-btn-1 {
+    width: 125px;
+    height: 47px;
+    background-color: transparent
+}
+
+/* sec1 end */
+/* header end */

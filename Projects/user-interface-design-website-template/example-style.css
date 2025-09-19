@@ -1,138 +1,279 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: #0f0f0f;
-  color: white;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars */
 }
 
-/* Layout */
-.container {
+/* --- Header --- */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-in {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+/* --- Main Content --- */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    height: calc(100vh - 120px); /* Adjust based on header/footer height */
+    align-items: center;
+    padding: 0 50px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.main-heading {
+    font-size: 10em; /* Adjust as needed */
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.beginner-text {
+    position: relative;
+    left: -40px; /* Adjust position */
+    margin-top: -20px;
+    overflow: hidden;
+    height: 300px;
+}
+
+.rotate-text {
+    position: absolute;
+    bottom: 0;
+    transform: rotate(270deg);
+    transform-origin: bottom left;
+    white-space: nowrap;
+    font-size: 2em;
+    letter-spacing: 5px;
+    color: #fff;
+    
+}
+
+.pro-designer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.square {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.purple-circle {
+    width: 350px;
+    height: 350px;
+    background-color: #7B4CFF;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.main-image {
+    width: 250px; /* Adjust size */
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.edition {
+    position: absolute;
+    top: 50px; /* Adjust position */
+    right: 50px; /* Adjust position */
+    text-align: right;
+}
+
+.edition p {
+    margin: 0;
+    line-height: 1;
+}
+
+.edition strong {
+    font-size: 2em;
+}
+
+.text-block {
+    margin-top: 100px;
+}
+
+.text-block h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.text-block p {
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.lets-start, .read-more {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lets-start {
+    background-color: #7B4CFF;
+    color: #fff;
+}
+
+.read-more {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* --- Footer --- */
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.nav-arrows {
+    display: flex;
+    gap: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+.challenge {
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.challenge-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  padding: 0 60px;
 }
 
-/* Left Section */
-.left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+.challenge-center {
+  position: relative;
+  z-index: 1;
 }
 
-.left h1 {
-  font-size: 70px;
-  font-weight: bold;
+.challenge h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.left h1 span {
-  color: #a855f7; /* Purple dot */
+.challenge .new {
+  font-weight: 400;
 }
 
-.left .vertical {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ddd;
+.challenge .bold {
+  font-size: 3.5rem;
 }
 
-.left .subtext {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 160px;
+  border: 1px solid #666;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
 }
 
-.left .subtext .square {
+.dot {
+  position: absolute;
   width: 12px;
   height: 12px;
-  background: white;
-  display: inline-block;
+  background: #a259ff;
+  border-radius: 50%;
 }
 
-.left .subtext p {
-  font-size: 12px;
-  color: #aaa;
-  line-height: 1.5;
+.left-dot {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 
-/* Right Section */
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
+.right-dot {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
 }
 
-/* Edition Box */
-.edition-box {
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
+.side-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  opacity: 0.8;
 }
 
-.edition-box h3 {
-  font-size: 24px;
-  margin-top: 5px;
-}
-
-/* Content */
-.content h2 {
-  font-size: 28px;
-  line-height: 1.4;
-}
-
-.content p {
-  margin-top: 15px;
-  color: #bbb;
-  max-width: 400px;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* Buttons */
-.buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-}
-
-.btn {
-  padding: 12px 25px;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
-
-.btn.purple {
-  background: #a855f7;
-  color: white;
-}
-
-.btn.purple:hover {
-  background: #9333ea;
-}
-
-.btn.outline {
-  border: 1px solid #aaa;
-  color: #aaa;
-}
-
-.btn.outline:hover {
-  border-color: #fff;
-  color: #fff;
+.down-arrow {
+  margin-top: 50px;
+  font-size: 2rem;
+  opacity: 0.7;
 }
