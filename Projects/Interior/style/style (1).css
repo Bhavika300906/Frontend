@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utility :- resuse */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header start */
+
+#header {
+    background: rgb(229, 213, 189);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#header::after {
+    content: url("/Images/headaer.png");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.icons {
+    display: none;
+
+}
+
+.icons i {
+    font-size: 20px;
+    color: #494949;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.list-ul .nav-list {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.nav-list .nav-a {
+    font-size: 15px;
+    color: #494949;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-list .sign {
+    background: rgb(71, 71, 71);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+}
+
+.header-content {
+    padding: 70px 0px;
+    text-align: center;
+    color: #3e3e3e;
+    font-family: "Open Sans";
+}
+
+.header-content .header-h1 {
+    width: 50%;
+    margin: 20px auto;
+    font-size: clamp(20px, 6.5vw, 48px);
+    text-transform: uppercase;
+    color: #976a4e;
+    font-weight: 400;
+    font-family: "Tenor Sans";
+}
+
+.header-content .header-h4 {
+    font-size: 23px;
+    font-size: clamp(18px, 2.5vw, 23px);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header-content .header-p {
+    width: 30%;
+    margin: 20px auto;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.button .header-btn {
+
+    border-radius: 14px;
+    background-color: #976a4e;
+    border: 5px solid #93684c;
+    padding: 10px 20px;
+}
+
+.button .header-btn1 {
+    font-size: 12px;
+    color: #976a4e;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* header end */
+
+/* sec1 start */
+#sec1 {
+    background-color: #494949;
+    padding: 40px 0px;
+}
+
+#sec1 .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sec1 .sec1-h3 {
+    font-size: 52px;
+    text-transform: uppercase;
+    color: #daceb8;
+    font-weight: 400;
+    font-family: "Tenor Sans";
+    text-align: center;
+}
+
+#sec1 .sec1-p {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #e0d4bd;
+    font-weight: 600;
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+/* sec1 end */
+
+/* our start */
+#our {
+    background: rgb(229, 213, 189);
+    padding: 30px 0px;
+}
+
+.our-text .our-h1 {
+    font-size: clamp(20px, 6.5vw, 48px);
+    text-transform: uppercase;
+    color: #976a4e;
+    font-weight: 400;
+    font-family: "Tenor Sans";
+    text-align: center;
+}
+
+.our-text .our-p {
+    width: 30%;
+    font-size: 15px;
+    color: #3e3e3e;
+    font-weight: 600;
+    font-family: "Open Sans";
+    text-align: center;
+    margin: 10px auto;
+}
+
+#our .row {
+    display: flex;
+}
+
+#our .row .col {
+
+    width: 33.33%;
+}
+
+.card {
+    padding: 20px 0px;
+}
+
+.card .card-img {
+    width: 75%;
+    margin: 20px auto;
+}
+
+.card-content .card-h4 {
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #976a4e;
+    font-weight: 600;
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+.card-content .card-p {
+    width: 70%;
+    margin: 10px auto;
+    font-size: 15px;
+    color: #3e3e3e;
+    font-weight: 600;
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn .our-btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #976a4e;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: 3px solid #976a4e;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+/* our end */
+
+/* project start */
+
+
+/* footer start */
+#foot {
+    background-color: #494949;
+    padding: 60px 0px;
+}
+
+#foot .row {
+    display: flex;
+}
+
+#foot .row .col {
+    width: 33.33%;
+    padding: 20px;
+}
+
+#foot .foot-h4 {
+    font-size: clamp(20px,3.5vw,29px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.foot-ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.foot-ul .foot-li {
+    margin: 10px 0px;
+}
+
+.foot-ul .foot-li .foot-a {
+    font-size: clamp(18px,2.7vw,25px);
+    letter-spacing: -1px;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: "Open Sans";
+}
+
+#foot .foot-p {
+     font-size: clamp(18px,2.7vw,25px);
+    margin: 20px 0px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+/* footer end */
