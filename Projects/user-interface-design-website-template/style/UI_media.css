@@ -1,0 +1,246 @@
+/* Media Queries*/
+
+@media only screen and (max-width:1160px) {}
+
+/* Tablet and below */
+@media only screen and (max-width: 992px) {
+    .hero-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-col-hero-left,
+    .hero-col-hero-right {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hero-col-hero-right .hero-p {
+        margin: 0 auto;
+    }
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+
+    /* Hide nav links, show menu icon */
+    .list-ul {
+        display: none;
+    }
+
+    .logo-2 {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav.active .list-ul {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .hero-col-hero-center {
+        display: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .container .count-row {
+        flex-direction: column;
+
+    }
+
+    .count-row {
+        display: block;
+    }
+
+    .oval-bg {
+        display: none;
+    }
+
+    .challenge-content {
+        font-size: 35px;
+    }
+
+    .course-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .more-opt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-abt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abt-li {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .btn-about {
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .why-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-left {
+        display: none;
+    }
+
+    .newsletter-container .newsletter-image {
+        display: none;
+    }
+
+    .newsletter-container .newsletter-content {
+        text-align: center;
+        padding: 20px;
+    }
+    .footer-container .footer-row{
+        display: block;
+        text-align: center;
+    }
+}
+
+/* small devices */
+@media only screen and (max-width: 576px) {
+    .ui-title {
+        font-size: 60px;
+    }
+
+    .beginner {
+        font-size: 28px;
+    }
+
+    .hero-col-hero-right .guide {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .container count-row {
+        flex-direction: column;
+
+    }
+
+    .count-row {
+        display: block;
+    }
+
+    .oval-bg {
+        display: none;
+    }
+
+    .challenge-text {
+        font-size: 35px;
+    }
+
+    .course-row {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-row {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .more-opt {
+        display: flex;
+        align-items: center;
+    }
+
+    /* about section  */
+    .container-abt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content .about-text h2 {
+        font-size: 16px;
+    }
+
+    .p-abt {
+        margin: 5px;
+        font-size: clamp(12px, 4vw, 18px);
+    }
+
+    .abt-li {
+        display: block;
+        flex-direction: column;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+    .btn-about {
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .why-container {
+        display: block;
+    }
+
+    .why-left {
+        display: none;
+    }
+
+    .newsletter-container .newsletter-image {
+        display: none;
+    }
+
+    .newsletter-container .newsletter-content {
+        text-align: center;
+        padding: 20px;
+    }
+    .footer-container .footer-row{
+        display: block;
+        text-align: center;
+    }
+}
