@@ -3,7 +3,10 @@
 @media only screen and (max-width:1160px) {}
 
 /* Tablet and below */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
     .hero-row {
         flex-direction: column;
         text-align: center;
@@ -12,19 +15,18 @@
     .hero-col-hero-left,
     .hero-col-hero-right {
         text-align: center;
-        padding: 10px 0;
+        padding: 5px 0;
     }
 
     .hero-col-hero-right .hero-p {
         margin: 0 auto;
     }
 
-}
-
-/* Mobile */
-@media only screen and (max-width: 768px) {
-
     /* Hide nav links, show menu icon */
+    .container {
+        padding: 0 5px;
+    }
+
     .list-ul {
         display: none;
     }
@@ -40,6 +42,10 @@
         margin-top: 10px;
     }
 
+    #hero {
+        padding-top: 10px;
+    }
+
     .hero-col-hero-center {
         display: none;
     }
@@ -47,7 +53,7 @@
     .hero-buttons {
         flex-direction: column;
         align-items: center;
-        margin: 10px;
+        margin: 5px;
     }
 
     .container .count-row {
@@ -57,6 +63,7 @@
 
     .count-row {
         display: block;
+        flex-direction: column;
     }
 
     .oval-bg {
@@ -64,7 +71,7 @@
     }
 
     .challenge-content {
-        font-size: 35px;
+        font-size: clamp(35px, 5vw, 45px);
     }
 
     .course-header {
@@ -117,6 +124,11 @@
         display: none;
     }
 
+    .why-right {
+        margin: 30%;
+        text-align: center;
+    }
+
     .newsletter-container .newsletter-image {
         display: none;
     }
@@ -125,7 +137,8 @@
         text-align: center;
         padding: 20px;
     }
-    .footer-container .footer-row{
+
+    .footer-container .footer-row {
         display: block;
         text-align: center;
     }
@@ -141,6 +154,11 @@
         font-size: 28px;
     }
 
+    .hero-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .hero-col-hero-right .guide {
         font-size: 16px;
     }
@@ -151,7 +169,7 @@
         margin: 10px;
     }
 
-    .container count-row {
+    .container .count-row {
         flex-direction: column;
 
     }
@@ -165,7 +183,12 @@
     }
 
     .challenge-text {
-        font-size: 35px;
+        margin: auto 0;
+        font-size: clamp(45px, 6vw, 60px);
+    }
+
+    .challenge-content {
+        font-size: clamp(35px, 5vw, 45px);
     }
 
     .course-row {
@@ -214,6 +237,11 @@
         margin: 0 auto;
     }
 
+    .about-text {
+        width: 115%;
+        padding-right: 20px;
+    }
+
     .btn-about {
         align-items: center;
         margin: 0 auto;
@@ -224,11 +252,24 @@
     }
 
     .why-container {
+        padding: 20px;
         display: block;
     }
 
     .why-left {
         display: none;
+    }
+
+    .why-right {
+        text-align: center;
+    }
+
+    .why-right h2 {
+        font-size: clamp(42px, 2vw, 65px);
+    }
+
+    .why-right p {
+        font-size: clamp(14px, 2vw, 30px);
     }
 
     .newsletter-container .newsletter-image {
@@ -239,7 +280,8 @@
         text-align: center;
         padding: 20px;
     }
-    .footer-container .footer-row{
+
+    .footer-container .footer-row {
         display: block;
         text-align: center;
     }

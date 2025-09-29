@@ -33,7 +33,7 @@
 }
 
 .nav-list .nav-a {
-    font-size: 17px;
+    font-size: clamp(14px, 4vw, 20px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 600;
@@ -63,22 +63,23 @@
 }
 
 .hero-col-hero-left .ui-title {
-    font-size: clamp(50px, 8vw, 132px);
+    font-size: clamp(100px, 6vw, 152px);
     font-weight: 700;
     font-family: "Krub";
 }
 
 .hero-col-hero-left .beginner {
-    font-size: 43px;
+    font-size: clamp(45px, 5vw, 55px);
     color: #ffffff;
-    font-weight: 400;
     font-family: "Krub";
     font-weight: 400;
     margin: 10px 0;
 }
 
 .sub-title {
-    font-size: 14px;
+    font-size: clamp(18px, 4vw, 25px);
+    font-family: "Krub";
+    font-weight: 400;
     text-transform: uppercase;
     font-weight: 700;
     margin: 0;
@@ -140,7 +141,7 @@
 }
 
 .hero-col-hero-right .hero-p {
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(14px, 2vw, 20px);
     text-align: justify;
     margin: 10px 0 15px 0;
     max-width: 300px;
@@ -158,7 +159,7 @@
 /* BUTTONS */
 .btn {
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: clamp(14px, 4vw, 20px);
     font-weight: 600;
 }
 
@@ -198,23 +199,23 @@
 }
 
 .count-number {
-    font-size: 51px;
+    font-size: clamp(65px, 5vw, 100px);
     color: #a460f9;
     font-weight: 500;
     font-family: "Oswald";
 }
 
 .count-box p {
-    font-size: 14px;
+    font-size: clamp(35px, 2vw, 60px);
     text-transform: uppercase;
     font-weight: 300;
-    font-family: "Krub", sans-serif;
+    font-family: "Krub";
     letter-spacing: 1px;
     color: #ccc;
 }
 
 .count-box p span {
-    display: inline block;
+    display: inline-block;
     font-weight: 700;
     color: #fff;
     margin-left: 5px;
@@ -227,22 +228,22 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    padding: 150px;
+    padding: 50px;
 }
 
 .challenge-content {
     position: relative;
     z-index: 2;
-    width: 200px;
+    width: 500px;
 }
 
 /* Oval background */
 .oval-bg {
     position: absolute;
-    top: 130px;
+    top: 150px;
     left: 100px;
-    width: 600px;
-    transform: translate(-50%, -50%);
+    width: 800px;
+    transform: translate(-30%, -48%);
     opacity: 0.9;
     text-align: center;
     z-index: 1;
@@ -251,7 +252,7 @@
 .challenge-text {
     position: relative;
     z-index: 3;
-    font-size: clamp(40px, 5.5vw, 80px);
+    font-size: clamp(40px, 10vw, 100px);
     width: 5px;
     text-transform: uppercase;
     color: #f2f2f2;
@@ -276,7 +277,7 @@
 }
 
 .course-header h2 {
-    font-size: clamp(26px, 5.6vw, 38px);
+    font-size: clamp(26px, 5.6vw, 40px);
     text-transform: uppercase;
     color: #f2f2f2;
     font-weight: 700;
@@ -292,14 +293,14 @@
 }
 
 .course-header .edition {
-    font-size: clamp(17px, 5vw, 25px);
+    font-size: clamp(17px, 5vw, 30px);
     color: #ffffff;
     font-weight: 700;
     font-family: "Krub";
 }
 
 .course-header .edition .year {
-    font-size: 20px;
+    font-size: clamp(20px, 4vw, 30px);
     font-weight: 700;
     margin-left: 6px;
     font-family: "Krub";
@@ -328,14 +329,14 @@
     left: -1px;
     background: #fff;
     color: #000;
-    font-size: clamp(14px, 5vw, 33px);
+    font-size: clamp(15px, 5vw, 35px);
     padding: 3px 8px;
     font-weight: 600;
     font-family: "Krub";
 }
 
 .course-card h3 {
-    font-size: clamp(18px, 6vw, 33px);
+    font-size: clamp(20px, 6vw, 35px);
     font-weight: 700;
     margin-bottom: 15px;
     text-align: center;
@@ -347,7 +348,7 @@
 
 .course-card h3 span {
     color: #a460f9;
-    font-size: clmap(18px, 6vw, 33px);
+    font-size: clamp(20px, 6vw, 35px);
     font-weight: 700;
     margin-bottom: 15px;
     text-align: center;
@@ -363,7 +364,7 @@
 }
 
 .course-card p {
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(14px, 7vw, 20px);
     color: #f2f2f2;
     font-weight: 600;
     font-family: "Krub";
@@ -385,7 +386,7 @@
 .more-opt {
     text-align: center;
     margin: 30px;
-    font-size: clamp(14px, 3vw, 16px);
+    font-size: clamp(18px, 3vw, 28px);
     text-transform: uppercase;
     color: #f2f2f2;
     font-weight: 700;
@@ -401,13 +402,13 @@
 }
 
 #about .container-abt {
-    margin: 0 auto;
+    margin: 0 20px;
     padding: 0 40px;
     font-size: 0;
 }
 
 .about-text h2 {
-    font-size: clamp(40px, 6vw, 61px);
+    font-size: clamp(40px, 6vw, 65px);
     color: #a460f9;
     font-family: "Krub";
 }
@@ -436,7 +437,7 @@
 }
 
 .about-text h2 {
-    font-size: clamp(40px, 6vw, 61px);
+    font-size: clamp(40px, 6vw, 65px);
     font-family: "Krub";
     margin-bottom: 20px;
 }
@@ -447,7 +448,7 @@
 }
 
 .p-abt {
-    font-size: 18px;
+    font-size: clamp(20px, 7vw, 30px);
     font-weight: 700;
     line-height: 1.6;
     font-family: "krub";
@@ -482,7 +483,7 @@
     font-family: "Krub";
     padding: 10px 25px;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: clamp(18px, 2vw, 25px);
     font-weight: 600;
     text-decoration: none;
 }
@@ -512,19 +513,21 @@
 #why-us {
     background: #000;
     padding: 80px 0;
+    font-weight: 800;
     font-family: "Krub";
     color: #fff;
 }
 
 .why-container {
-    padding: 50px;
-    margin: 30px 50px;
-
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 40px 40px;
 }
 
 .why-left {
     display: inline-block;
-    width: 50%;
+    width: 70%;
     text-align: center;
     position: relative;
 }
@@ -534,14 +537,14 @@
     height: 395px;
     border-radius: 50%;
     background: #9b5de5;
-    margin: 0 auto;
+    margin: 0 10px;
     position: relative;
 }
 
 .person-img {
     position: absolute;
     top: 20px;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
     width: 350px;
     height: auto;
@@ -549,14 +552,14 @@
 
 .why-right {
     display: inline-block;
-    width: 49%;
+    width: 80%;
     text-align: left;
     padding-left: 30px;
     box-sizing: border-box;
 }
 
 .why-right h2 {
-    font-size: clamp(42px, 2vw, 50px);
+    font-size: clamp(42px, 2vw, 65px);
     margin-bottom: 20px;
 }
 
@@ -570,7 +573,7 @@
 }
 
 .why-right p {
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: clamp(14px, 2vw, 30px);
     line-height: 1.7;
     color: #ddd;
     margin-bottom: 25px;
@@ -582,7 +585,7 @@
     padding: 12px 28px;
     color: #fff;
     font-weight: 600;
-    font-size: clamp(14px, 2vw, 16px);
+    font-size: clamp(18px, 2vw, 26px);
 }
 
 /* Why Section close */
@@ -639,14 +642,14 @@
 
 .stars {
     color: #a460f9;
-    font-size: 18px;
+    font-size: clamp(18px, 5vw, 25px);
     margin-bottom: 15px;
 }
 
 .review-card p {
     font-family: "Krub";
     letter-spacing: 2px;
-    font-size: clamp(14px, 5vw, 18px);
+    font-size: clamp(18px, 5vw, 25px);
     color: #ddd;
     line-height: 1.6;
     position: relative;
@@ -654,7 +657,7 @@
 
 .review-card .quote {
     color: #a460f9;
-    font-size: clamp(18px, 7vw, 20px);
+    font-size: clamp(18px, 7vw, 25px);
     font-weight: bold;
 }
 
@@ -691,7 +694,7 @@
 }
 
 .newsletter-content h2 {
-    font-size: 32px;
+    font-size: clamp(32px, 5vw, 40px);
     color: #a460f9;
     font-weight: 800;
     font-family: "krub";
@@ -710,6 +713,7 @@
     font-family: "krub";
     margin: 10px 20px 25px 0;
 }
+
 /* News letter close */
 
 /* News letter Form start */
@@ -731,7 +735,7 @@
 .newsletter-form .submit {
     max-width: 200px;
     padding: 8px 15px;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(15px, 2vw, 25px);
     margin: 0 auto;
     display: block;
     background-color: #a460f9;
@@ -743,8 +747,9 @@
 .newsletter-form textarea::placeholder {
     color: #aaa;
     text-transform: uppercase;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(15px, 7vw, 25px);
 }
+
 /* News letter Form end */
 
 /* Footer start */
@@ -763,7 +768,7 @@
 .footer-row h3 {
     color: #fff;
     margin: 10px 50px;
-    font-size: clamp(25px, 5vw, 33px);
+    font-size: clamp(25px, 5vw, 35px);
     letter-spacing: 2px;
     color: #ffffff;
     font-weight: 700;
@@ -774,7 +779,7 @@
     margin: 10px 50px;
     list-style: none;
     padding: 0;
-    font-size: clamp(18px, 5vw, 25px);
+    font-size: clamp(20px, 5vw, 30px);
     color: #ffffff;
     font-weight: 500;
     font-family: "Krub";
@@ -811,7 +816,7 @@
 }
 
 .follow-us h3 {
-    font-size: 25px;
+    font-size: clamp(25px, 5vw, 35px);
     line-height: 33px;
     color: #ffffff;
     font-weight: 500;
@@ -840,7 +845,7 @@
 
 .follow li i {
     color: #6b46c1;
-    font-size: 18px;
+    font-size: clamp(20px, 5vw, 30px);
 }
 
 #sign-up-text {
