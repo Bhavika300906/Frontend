@@ -1,0 +1,39 @@
+/* ===== Responsive Design ===== */
+/* For big screens (max-width: 1360px) */
+@media (max-width: 1360px) {}
+
+/* For laptops screens(max-width: 960px) */
+@media (max-width: 960px) {}
+
+/* For tablets and medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+}
+
+/* For small mobile screens (max-width: 540px) */
+@media (max-width: 540px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        /* 1 column */
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
