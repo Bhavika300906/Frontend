@@ -34,7 +34,6 @@
 @media (max-width:540px) {
     .container {
         flex-direction: column;
-        /* Stack vertically on smaller screens */
         align-items: center;
     }
 
@@ -63,7 +62,4 @@
         width: 100%;
         padding: 15px;
     }
-
-
-
 }

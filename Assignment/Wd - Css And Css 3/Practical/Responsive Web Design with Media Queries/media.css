@@ -7,10 +7,8 @@
 /* Responsive for devices below 768px */
 @media (max-width: 768px) {
     .navbar {
-        /* flex-direction: column; */
         text-align: center;
     }
-
 
     .navbar .nav-links {
         display: none;

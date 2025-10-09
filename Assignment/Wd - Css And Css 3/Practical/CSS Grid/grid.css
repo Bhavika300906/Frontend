@@ -1,24 +1,23 @@
-/* ===== Base Styles ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Noto Sans KR";
 }
-
+/* Body */
 body {
     background-color: #01413b46;
     padding: 30px;
 }
 
-/* ===== Title ===== */
+/* Title */
 .title {
     text-align: center;
     color: #f10707;
     margin-bottom: 30px;
 }
 
-/* ===== Grid Layout ===== */
+/*  Grid Layout  */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -27,7 +26,7 @@ body {
     margin: 0 auto;
 }
 
-/* ===== Card Style ===== */
+/*  Card Style  */
 .card {
     background-color: #ffffff;
     border: 2px solid #0816d6a2;

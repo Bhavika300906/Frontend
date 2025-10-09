@@ -1,4 +1,3 @@
-/* ===== Global Styles ===== */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@ body {
     background-color: #f4f9ff;
 }
 
-/* ===== Header ===== */
+/* Header */
 .header {
     background-color: #0077b6;
     color: #fff;
@@ -18,18 +17,16 @@ body {
     padding: 20px;
 }
 
-/* ===== Flexbox Container ===== */
+/* Flexbox Container */
 .container {
     display: flex;
-    justify-content: space-between;
-    /* Try: center, space-around, space-evenly */
-    align-items: stretch;
-    /* Try: center, flex-start, flex-end */
+    justify-content: space-between /* center space-around space-evenly */;
+    align-items: stretch /* center, flex-start, flex-end */;
     padding: 20px;
     gap: 25px;
 }
 
-/* ===== Sidebar ===== */
+/* Sidebar */
 .sidebar {
     flex: 1;
     background-color: #caf0f8;
@@ -47,17 +44,19 @@ body {
     list-style: none;
     margin-top: 10px;
 }
+
 .nav-links a {
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
 }
+
 .sidebar li {
     margin-bottom: 10px;
     text-decoration: none;
 }
 
-/* ===== Main Content ===== */
+/* Main Content */
 .main-content {
     flex: 3;
     background-color: #fff;
@@ -66,7 +65,7 @@ body {
     padding: 20px;
 }
 
-/* ===== Footer ===== */
+/* Footer */
 .footer {
     background-color: #0077b6;
     color: #fff;
