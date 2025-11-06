@@ -1,0 +1,206 @@
+.carousel img {
+            height: 350px;
+            /* Adjust banner height */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            border-radius: 10px;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #dc3545;
+            /* BookMyShow red */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+            /* Make controls visible on dark images */
+        }
+        <!-- Section Header -->
+    <section class="movies-grid">
+        <div class="d-flex justify-content-between align-items-center mb-4 p-4">
+            <h5 class="fw-semibold lg">Recommended Movies</h5>
+            <a href="https://in.bookmyshow.com/explore/movies-ahmedabad"
+                class="text-danger fw-semibold text-decoration-none">See All ›</a>
+        </div>
+        <section class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+            <!-- Movie Grid 1-->
+            <!-- Movie Card 1 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC42LzEwICA0LjFLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00451887-gltnqntzvk-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Chaniya Toli">
+                    <h6 class="m-name">Chaniya Toli</h6>
+                    <small>Action/Comedy/Crime</small>
+                </div>
+            </div>
+            <!-- Movie Card 2 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS42LzEwICAxLjRLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00459408-jlwkewdzwa-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Laalo - Krishna Sada Sahaayate">
+                    <h6 class="m-name">Laalo - Krishna Sada Sahaayate</h6>
+                    <small>Drama</small>
+                </div>
+            </div>
+            <!-- Movie Card 3 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC8xMCAgNjQuN0srIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00443268-ppwfyshqyd-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Thamma">
+                    <h6 class="m-name">Thamma</h6>
+                    <small>Comedy/Horror/Romantic/Supernatural</small>
+                </div>
+            </div>
+            <!-- Movie Card 4 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4yLzEwICAxLjZLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00467657-yvcsqmvkcc-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="The Taj Story">
+                    <h6 class="m-name">The Taj Story</h6>
+                    <small>Drama</small>
+                </div>
+            </div>
+            <!-- Movie Card 5 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4yLzEwICAzMC4zSysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00447585-pfbqxwkcdx-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Ek Deewane ki Deewaniyat">
+                    <h6 class="m-name">Ek Deewane ki Deewaniyat</h6>
+                    <small>Drama/Romantic/Thriller</small>
+                </div>
+            </div>
+            <!-- Movie grid 2 -->
+
+            <!-- Movie Card 6 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS45LzEwICAxLjRLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00464386-azsrabetkj-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Misri">
+                    <h6 class="m-name">Misri</h6>
+                    <small></small>
+                </div>
+            </div>
+            <!-- Movie Card 7 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4zLzEwICA1MzVLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00377351-dtgqlapgna-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Kantara: A Legend Chapter-1">
+                    <h6 class="m-name">Kantara: A Legend Chapter-1</h6>
+                    <small>Adventure/Drama/Thriller</small>
+                </div>
+            </div>
+            <!-- Movie Card 8 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS43LzEwICAyNS41SysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00453094-adqjhyncdr-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Baahubali: The Epic">
+                    <h6 class="m-name">Baahubali: The Epic</h6>
+                    <small>Action/Drama/Fantasy</small>
+                </div>
+            </div>
+            <!-- Movie Card 9 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MksrIExpa2Vz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00396850-ftqmxfrghm-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Man of Steel: Sardar">
+                    <h6 class="m-name">Man of Steel: Sardar</h6>
+                    <small>Drama</small>
+                </div>
+            </div>
+            <!-- Movie Card 10 -->
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC45LzEwICA2LjRLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00450272-xqevcpscdt-portrait.jpg"
+                        class="d-flex w-100 h-150" alt="Bachu Ni Benpani">
+                    <h6 class="m-name">Bachu Ni Benpani</h6>
+                    <small class="">Comedy/Drama/Family</small>
+                </div>
+            </div>
+        </section>
+          .movie-card img {
+            border-radius: 15px;
+        }
+
+        .fw-bold {
+            word-break: break-word;
+            color: rgb(51, 51, 51);
+            font-family: Roboto;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.17;
+        }
+
+        .m-name {
+            font-weight: 600;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.3vw;
+            margin-top: 8px;
+            margin-bottom: 2px;
+        }
+
+        .small {
+            color: #6c757d;
+            font-family: 'Roboto', sans-serif;
+            font-size: vw;
+        }
+
+
+        .movie-row {
+            position: relative;
+        }
+
+        .movie-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 1rem;
+            padding-bottom: 10px;
+        }
+        <div class="best-live-events-header">
+            <h5>The Best Of Live Events</h5>
+        </div>
+
+        <div class="best-event">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img class="best-event-img" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NzArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png"
+                    alt="comedy-show">
+            </a>
+        </div>
+        <div class="best-event">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img class="best-event-img" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/theatre-shows-collection-202211140440.png"
+                    alt="Theater-show">
+            </a>
+        </div>
+        <div class="best-event">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img class="best-event-img" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/kids-banner-desktop-collection-202503251132.png"
+                    alt="Kids">
+            </a>
+        </div>
+        <div class="best-event">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img class="best-event-img" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MzArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png"
+                    alt="Music">
+            </a>
+        </div>
+        <div class="best-event">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img class="best-event-img" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MjArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/arts-crafts-collection-202211140440.png"
+                    alt="Craft">
+            </a>
+        </div>
+        <div class="best-event">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img class="best-event-img" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MzUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png"
+                alt="Workshop">
+            </a>
+        </div>
+        <div class="best-event">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img class="best-event-img" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NCBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/upskill-collection-202211140440.png"
+                alt="upskill">
+            </a>
+        </div>
+        
