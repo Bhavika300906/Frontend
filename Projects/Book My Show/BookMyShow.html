@@ -2,33 +2,530 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap - JS Link -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Projects/Book My Show/style.css">
+    <link rel="stylesheet" href="/Projects/Book My Show/script.js">
 
 </head>
 
 <body>
-  <!-- <h1 class="bg-info">Book my Show</h1> -->
-  <div class="container">
-    <!-- 1. Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-3">
-      <a class="navbar-brand" href="index.html">
-        
-        <img src="/Projects/Book My Show/image/Book my show image.png" alt="BookMyShow" height="40">
-      </a>
-    </nav>
-    <!-- Search -->
-    <form class="d-flex mx-auto" role="search" data-bs-toggle="modal" data-bs-target="#searchModal" style="width: 50%; margin-top: 10px; border: 1px solid lightgray; border-radius: 5px; padding: 5px;">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input class="form-control me-2" type="search" placeholder="Search for Movies, Events..." readonly>
-    </form>
-  </div>
 
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white px-3">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/Projects/Book My Show/image/Book my show image.png" alt="BookMyShow" height="40">
+        </a>
+
+        <!-- Search Bar -->
+        <form class="d-flex mx-auto" role="search">
+            <input class="form-control me-2 rounded-pill" type="search"
+                placeholder="Search for Movies, Events, Plays, Sports and Activities" readonly data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+        </form>
+
+        <!-- City Selector -->
+        <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#cityModal">
+            City <i class="bi bi-caret-down-fill ms-1"></i>
+        </button>
+
+        <!-- Sign In -->
+        <button class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</button>
+
+        <!-- Hamburger Menu -->
+        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+            <i class="bi bi-list fs-3"></i>
+        </button>
+    </nav>
+
+    <!-- SEARCH MODAL -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content border-0">
+                <div class="modal-body bg-light">
+
+                    <!-- Search Input -->
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-search fs-4 text-muted me-2"></i>
+                        <input type="text" class="form-control border-0 bg-white shadow-sm rounded-pill py-2 px-4"
+                            placeholder="Search for Movies, Events, Plays & more">
+                        <button type="button" class="btn ms-2" data-bs-dismiss="modal">
+                            <i class="bi bi-x-lg fs-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge rounded-pill text-danger border border-danger px-3 py-2">Movies</span>
+                        <span class="badge rounded-pill text-danger border border-danger px-3 py-2">Stream</span>
+                        <span class="badge rounded-pill text-danger border border-danger px-3 py-2">Events</span>
+                        <span class="badge rounded-pill text-danger border border-danger px-3 py-2">Plays</span>
+                        <span class="badge rounded-pill text-danger border border-danger px-3 py-2">Sports</span>
+                        <span class="badge rounded-pill text-danger border border-danger px-3 py-2">Activities</span>
+                    </div>
+
+                    <!-- Trending -->
+                    <h6 class="fw-bold text-secondary mb-3">TRENDING SEARCHES</h6>
+
+                    <div class="list-group">
+                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                            Laalo - Krishna Sada Sahaayate <i class="bi bi-film fs-5 text-muted"></i>
+                        </a>
+                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                            Chaniya Toli <i class="bi bi-film fs-5 text-muted"></i>
+                        </a>
+                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                            The Taj Story <i class="bi bi-film fs-5 text-muted"></i>
+                        </a>
+                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                            Lalijo Lalijo <i class="bi bi-film fs-5 text-muted"></i>
+                        </a>
+                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                            Baahubali: The Epic <i class="bi bi-film fs-5 text-muted"></i>
+                        </a>
+                        <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                            Misri <i class="bi bi-film fs-5 text-muted"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- City Select Modal -->
+    <div class="modal fade" id="cityModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content city-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-semibold">Select Your City</h5> <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Search bar -->
+                    <div class="search-bar position-relative mb-4"> <i class="bi bi-search search-icon"></i>
+                        <input type="text" class="form-control city-search" placeholder="Search for your city">
+                    </div>
+                    <!-- Popular Cities -->
+                    <div class="row g-6 text-center align-items-center justify-content-center">
+                        <div class="col-4"> <img
+                                src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ahd.png"
+                                width="55"><br> <span class="active-city">Ahmedabad</span> </div>
+                        <div class="col-4"> <img
+                                src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/mumbai.png"
+                                width="55"><br> <span>Mumbai</span> </div>
+                        <div class="col-4"> <img
+                                src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/pune.png"
+                                width="55"><br> <span>Pune</span> </div>
+                        <div class="col-4"> <img
+                                src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ncr.png"
+                                width="55"><br> <span>Delhi</span> </div>
+                        <div class="col-4"> <img
+                                src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/bang.png"
+                                width="55"><br> <span>Bangalore</span> </div>
+                        <div class="col-4"> <img
+                                src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/hyd.png"
+                                width="55"><br> <span>Hyderabad</span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- City Modal script -->
+
+    <!-- script end -->
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Sign in / Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <button class="btn btn-outline-dark w-100 mb-2"><i class="bi bi-google me-2"></i>
+                        Continue with Google <a
+                            href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Ffedcm%2Fsignincontinue&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S740260979%3A1761984467765668"></a></button>
+                    <button class="btn btn-outline-dark w-100 mb-2"><i class="bi bi-apple me-2"></i> Continue with
+                        Apple <a
+                            href="https://appleid.apple.com/auth/authorize?client_id=BookMyShow.com.client&redirect_uri=https%3A%2F%2Fin.bookmyshow.com%2Fapple%2Flogin&response_type=code%20id_token&state=Apple%20Sign%20In%20Started%20in%20Mobile%20Web&scope=name%20email&response_mode=form_post"></a></button>
+                    <div class="my-3 text-secondary">or</div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><img src="https://flagcdn.com/w20/in.png"> +91</span>
+                        <input type="tel" class="form-control" placeholder="Enter mobile number">
+                    </div>
+                    <button class="btn btn-danger w-100">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIDEBAR (OFFCANVAS) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sideMenu">
+        <div class="offcanvas-header sticky-top bg-white border-bottom">
+            <h5>Hey!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex align-items-center p-3 bg-light rounded mb-3">
+                <img src="https://assets-in.bmscdn.com/webin/movies/superstar/rewards_login.png" alt="offer-img">
+                <span>Unlock special offers & great benefits</span>
+            </div>
+            <a href="#" class="d-block py-2 border-bottom">Your Orders</a>
+            <a href="#" class="d-block py-2 border-bottom">Stream Library</a>
+            <a href="#" class="d-block py-2 border-bottom">Play Credit Card</a>
+            <a href="#" class="d-block py-2 border-bottom">Help & Support</a>
+            <a href="#" class="d-block py-2 border-bottom">Accounts & Settings</a>
+            <a href="#" class="d-block py-2 border-bottom">Rewards</a>
+            <a href="#" class="d-block py-2 border-bottom">BookAChange</a>
+        </div>
+    </div>
+    <div class="navbar-container">
+        <!-- SECONDARY NAVBAR -->
+        <nav class="navbar navbar-expand bg-light border-top border-bottom py-0">
+            <div class="container-fluid justify-content-between">
+
+                <!-- Left Menu -->
+                <ul class="navbar-nav me-auto mb-0">
+                    <li class="nav-item"><a class="nav-link px-3 text-dark fw-semibold"
+                            href="https://in.bookmyshow.com/explore/movies-ahmedabad?cat=MT">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark fw-semibold"
+                            href="https://in.bookmyshow.com/explore/c/stream?cat=Online%20Streaming%20Events">Stream</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark fw-semibold"
+                            href="https://in.bookmyshow.com/explore/events-ahmedabad?cat=CT">Events</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark fw-semibold"
+                            href="https://in.bookmyshow.com/explore/plays-ahmedabad?cat=PL">Plays</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark fw-semibold"
+                            href="https://in.bookmyshow.com/explore/sports-ahmedabad?cat=SP">Sports</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-dark fw-semibold"
+                            href="https://in.bookmyshow.com/explore/activities-ahmedabad?cat=AT">Activities</a></li>
+                </ul>
+
+                <!-- Right Menu -->
+                <ul class="navbar-nav ms-auto mb-0">
+                    <li class="nav-item"><a class="nav-link px-3 text-secondary small"
+                            href="https://in.bookmyshow.com/list-your-show/">ListYourShow</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-secondary small"
+                            href="https://in.bookmyshow.com/voucher">Corporates</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-secondary small"
+                            href="https://in.bookmyshow.com/offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-secondary small"
+                            href="https://in.bookmyshow.com/giftcards">Gift Cards</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- SLIDESHOW SECTION -->
+    <div id="promoCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4 overflow-hidden">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <a href="https://bms-pp.getpopcard.co/?utm_source=BMS&utm_medium=abc&utm_campaign=cg">
+                            <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1760430005960_popccweb.jpg"
+                                class="d-block w-100 h-150 border-radius-30" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://in.bookmyshow.com/explore/activities?categories=amusement-parks">
+                            <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1761907921032_amusementparkdesktop.jpg"
+                                class="d-block w-100 h-150" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://in.bookmyshow.com/movies/the-conjuring-last-rites/ET00445371">
+                            <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1761910560106_keinemusikmaindesktop.jpeg"
+                                class="d-block w-100 h-150" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- MOVIE RECOMMENDATION SECTION -->
+    <section class="movie-section">
+        <div class="movie-header">
+            <h5>Recommended Movies</h5>
+            <a href="#" class=" see-all text-danger small ">See All ›</a>
+        </div>
+
+        <div class="movie-grid-wrapper ">
+            <button class="scroll-btn prev" id="prevBtn">‹</button>
+
+            <div class="movie-grid" id="movieGrid">
+
+                <!-- Movie Cards -->
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC42LzEwICA0LjFLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00451887-gltnqntzvk-portrait.jpg"
+                        alt="Chaniya Toli">
+                    <h6>Chaniya Toli</h6>
+                    <small>Action/Comedy/Crime</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS42LzEwICAxLjRLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00459408-jlwkewdzwa-portrait.jpg"
+                        alt="Laalo - Krishna Sada Sahaayate">
+                    <h6>Laalo - Krishna Sada Sahaayate</h6>
+                    <small>Drama</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC8xMCAgNjQuN0srIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00443268-ppwfyshqyd-portrait.jpg"
+                        alt="Thamma">
+                    <h6>Thamma</h6>
+                    <small>Comedy/Horror/Romantic</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4yLzEwICAxLjZLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00467657-yvcsqmvkcc-portrait.jpg"
+                        alt="The Taj Story">
+                    <h6>The Taj Story</h6>
+                    <small>Drama</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4yLzEwICAzMC4zSysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00447585-pfbqxwkcdx-portrait.jpg"
+                        alt="Ek Deewane Ki Deewaniyat">
+                    <h6>Ek Deewane Ki Deewaniyat</h6>
+                    <small>Romantic/Thriller</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS45LzEwICAxLjRLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00464386-azsrabetkj-portrait.jpg"
+                        alt="Misri">
+                    <h6>Misri</h6>
+                    <small>Romantic</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4zLzEwICA1MzVLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00377351-dtgqlapgna-portrait.jpg"
+                        alt="Kantara">
+                    <h6>Kantara: A Legend Chapter-1</h6>
+                    <small>Action/Thriller</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS43LzEwICAyNS41SysgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00453094-adqjhyncdr-portrait.jpg"
+                        alt="Baahubali">
+                    <h6>Baahubali: The Epic</h6>
+                    <small>Action/Drama/Fantasy</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MksrIExpa2Vz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00396850-ftqmxfrghm-portrait.jpg"
+                        alt="Man of Steel: Sardar">
+                    <h6>Man of Steel: Sardar</h6>
+                    <small>Drama</small>
+                </div>
+
+                <div class="movie-card">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC45LzEwICA2LjRLKyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00450272-xqevcpscdt-portrait.jpg"
+                        alt="Bachu Ni Benpani">
+                    <h6>Bachu Ni Benpani</h6>
+                    <small>Comedy/Family</small>
+                </div>
+            </div>
+            <button class="scroll-btn next" id="nextBtn">›</button>
+        </div>
+    </section>
+    <script>
+        const grid = document.getElementById('movieGrid');
+        const next = document.getElementById('nextBtn');
+        const prev = document.getElementById('prevBtn');
+
+        next.addEventListener('click', () => {
+            grid.scrollBy({ left: 900, behavior: 'smooth' });
+            prev.style.display = 'block';
+        });
+
+        prev.addEventListener('click', () => {
+            grid.scrollBy({ left: -900, behavior: 'smooth' });
+            if (grid.scrollLeft <= 0) {
+                prev.style.display = 'none';
+            }
+        });
+
+    </script>
+    <section class="Streaming">
+        <div class="stream">
+            <a href="https://in.bookmyshow.com/explore/c/stream">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/stream-leadin-web-collection-202210241242.png"
+                    alt="streaming">
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-content">
+
+                <div class="footer-list">
+                    <img src="https://in.bmscdn.com/webin/common/icons/hut.svg" alt="footer-icon">
+                </div>
+                <div class="foot-main-list">
+                    List your Show
+                </div>
+                <div class="footer-main-text">
+                    Got a show, event, activity or a great experience? Partner with us & get listed on
+                    BookMyShow
+                </div>
+                <a href="https://in.bookmyshow.com/list-your-show" class="footer-contact-btn">
+                    Contact Today!
+                </a>
+            </div>
+        </div>
+        <section class="support-section p-3">
+            <div class="supp-container">
+                <div class="row text-center justify-content-center ">
+
+                    <!-- CUSTOMER CARE -->
+                    <div class="col-md-3 support-item">
+                        <div data-bs-toggle="modal" data-bs-target="#customerModal">
+                            <a href="https://support.bookmyshow.com/" target="_blank">
+                                <img src="/Projects/Book My Show/image/customer-service.png" class="support-icon">
+                                <p class="support-text mt-2">24/7 CUSTOMER CARE</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- RESEND CONFIRMATION -->
+                    <div class="col-md-3 support-item" data-bs-toggle="modal" data-bs-target="#resendModal">
+                        <img src="/Projects/Book My Show/image/ticket.png" class="support-icon">
+                        <p class="support-text mt-2">RESEND BOOKING CONFIRMATION</p>
+                    </div>
+                    <!-- RESEND CONFIRMATION MODAL -->
+                    <div class="modal fade" id="resendModal" tabindex="-1">
+                        <div class="modal-dialog modal-content">
+                            <div class="modal-content resend-modal p-5">
+
+                                <!-- Close Button -->
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+
+                                <!-- Title -->
+                                <h3 class="text-center fw-semibold mt-2">Resend Confirmation</h3>
+
+                                <!-- Subtitle -->
+                                <h5 class="text-center mt-2 fw-normal">Lost your confirmation details?</h5>
+
+                                <!-- Description -->
+                                <p class="text-center text-muted mb-4">
+                                    No worries, we've got you covered! Simply enter the info you used while booking &
+                                    we'll send it to you in a jiffy!
+                                </p>
+
+                                <!-- Form Fields -->
+                                <input type="email" class="form-control resend-input mb-4" placeholder="Email">
+                                <input type="text" class="form-control resend-input mb-4" placeholder="Mobile">
+                                <!-- Button -->
+                                <button class="btn resend-btn w-100 py-3 btn-danger">Resend</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NEWSLETTER -->
+                    <div class="col-md-3 support-item" data-bs-toggle="modal" data-bs-target="#newsletterModal">
+                        <img src="/Projects/Book My Show/image/newsletter.png" class="support-icon">
+                        <p class="support-text mt-2">SUBSCRIBE TO THE NEWSLETTER</p>
+                    </div>
+                    <!-- NEWSLETTER MODAL -->
+                    <div class="modal fade" id="newsletterModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content p-5">
+                                <!-- Close Button -->
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <h4 class="text-center fw-bold">Subscribe To Newsletters</h4>
+                                <p class="text-center mt-2">Never miss an update from us!</p>
+                                <p class="text-center mt-2">Subscribe to our free newsletters to be the first one to
+                                    know
+                                    about all things entertainment.</p>
+                                <input type="email" class="form-control mt-3 " placeholder="Enter Email">
+                                <button class="btn btn-danger w-100 mt-4">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-footer">
+            <div class="footer-sec-img">
+                <hr class="pro-line">
+                <a href="https://in.bookmyshow.com/explore/home/ahmedabad">
+                    <img src="/Projects/Book My Show/image/logo.svg" alt="book-my-show" class="img-foot">
+                </a>
+                <hr class="pro-line">
+            </div>
+            <div class="socio-icon">
+                <ul class="follow-icon">
+                    <a href="https://www.facebook.com/BookMyShowIN">
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                    </a>
+                    <a href="https://x.com/BookMyShow/">
+                        <li><i class="fa-brands fa-x-twitter"></i></li>
+                    </a>
+                    <a href="https://www.youtube.com/user/BookMyShow/featured">
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                    </a>
+                    <a href="https://www.pinterest.com/bookmyshow/">
+                        <li><i class="fa-brands fa-pinterest"></i></li>
+                    </a>
+                    <a href="https://www.instagram.com/bookmyshowin/">
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/checkpoint/challenge/AgEJwfOeHWT9bAAAAZp4A9A2OAbTD-n7C45zbm8XhenCa4t5GN1g8rCCgLX5Xy9xitOXvIPWCm4C_Se1hkeQI_TgnfNUMg?ut=3MMkZq7WRBlY01">
+                        <li><i class="fa-brands fa-linkedin-in"></i></li>
+                    </a>
+                </ul>
+            </div>
+            <div class="copywrt-txt">
+                Copyright
+                <!--  -->
+                2025
+                <!--  -->
+                © Bigtree Entertainment Pvt. Ltd. All Rights Reserved.
+                <br>
+                "The content and images used on this site are copyright protected and copyrights vests with the
+                respective owners. The usage of the content and images on this website is intended to promote the works
+                and no endorsement of the artist shall be implied. Unauthorized use is prohibited and punishable by
+                law."
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>

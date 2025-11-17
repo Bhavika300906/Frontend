@@ -2,12 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: inherit;
-
 }
 
 body {
     background-color: #f8f9fa;
-    /* padding: 50px; */
+
 }
 
 /* Navbar Styling */
@@ -15,10 +14,11 @@ body {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Search Modal Styling */
+/* Search Modal  */
 .modal-fullscreen .modal-body {
     padding: 2rem 3rem;
 }
+
 
 .list-group-item {
     border: none;
@@ -31,19 +31,26 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Sticky header inside offcanvas */
+
 .offcanvas-header.sticky-top {
     position: sticky;
     top: 0;
     z-index: 1020;
 }
+/* City Modal */
+.search-bar{
+    position: absolute;
+}
+.search-bar i{
+    position: relative;
+}
+/* SLIDESHOW SECTION */
 
 /* BookMyShow red */
 .navbar-nav .nav-link:hover {
     color: #dc3545 !important;
 
 }
-
 .carousel-indicators {
     position: absolute;
     right: 0;
@@ -54,13 +61,26 @@ body {
     justify-content: center;
     padding: 0;
     margin-right: 15%;
-    /* margin-bottom: 1rem; */
     margin-left: 15%;
 }
 
 .movie-card {
+    flex: 0 0 calc(20% - 20px);
+    /* 5 cards on a row */
     min-width: 200px;
-    flex: 0 0 auto;
+    /* Ensures consistent card size */
+}
+
+.movie-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.movie-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .movie-card img {
@@ -68,33 +88,33 @@ body {
     border-radius: 10px;
 }
 
-
 .scroll-btn {
     position: absolute;
+    top: 45%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, .5);
     border: none;
-    color: white;
-    font-size: 24px;
-    border-radius: 50%;
+    color: #fff;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
     cursor: pointer;
-    z-index: 10;
-    display: none;
-}
-
-.scroll-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.scroll-btn.prev {
-    left: 20px;
+    z-index: 100;
 }
 
 .scroll-btn.next {
-    right: 20px;
-    display: block;
+    right: 10px;
+}
+
+.scroll-btn.prev {
+    left: 10px;
+    display: none;
+}
+
+
+.scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* ====== Layout ====== */
@@ -152,10 +172,18 @@ body {
     margin-top: 8px;
     font-weight: 600;
     font-size: 1rem;
+    align-items: center;
 }
 
 .movie-card small {
     color: #666;
+    align-items: center;
+    margin: 0px;
+    word-break: break-word;
+    color: rgb(102, 102, 102);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
 }
 
 /* ====== Buttons ====== */
@@ -189,7 +217,7 @@ body {
 }
 
 .Streaming {
-    margin: 40px;
+    margin: 0 40px;
 }
 
 .stream img {
@@ -199,60 +227,170 @@ body {
 }
 
 .footer {
+    align-items: center;
     background-color: rgb(49, 48, 53);
+}
+
+.footer-main {
+    align-items: center;
+    margin: 40px 40px 20px 40px;
+    max-width: 1280px;
     color: rgb(255, 255, 255);
     font-size: 16px;
 }
 
-.footer-content-1 {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: flex-start;
-    /* opacity: 1; */
-}
-
-.footer-content-main {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0px auto;
-    padding: 15px;
-    align-items: center;
-}
-
 .footer-content {
+
+    padding: 15px;
+    align-items: center;
+    margin: 0px auto;
     display: flex;
     flex-flow: row;
-    align-items: center;
     justify-content: flex-start;
-    opacity: 1;
-}
-
-.footer-content img {
-    padding: 8px;
-}
-
-.footer-main-header {
-    flex: 0 0 auto;
-    padding: 15px;
-    margin: 0px auto;
-    max-width: 1280px;
-    margin: 0px 16px 0px 4px;
-    align-items: center;
-    font-weight: 600;
 }
 
 .footer-list {
     flex: 0 0 auto;
+    align-items: center;
+}
+
+.footer-list img {
+    padding: 8px;
+    align-items: center;
+    max-width: 100%;
+}
+
+.foot-main-list {
+    flex: 0 0 auto;
     margin: 0px 16px 0px 4px;
     font-weight: 600;
-    gap: 10px;
 }
 
 .footer-main-text {
     flex: 1 1 0%;
 }
 
-.footer-main-p {
-    flex: 1 1 0%;
+.footer-contact-btn {
+    flex: 0 0 auto;
+    background-color: rgb(236, 94, 113);
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.support-section {
+    background: #3d3d3f;
+}
+
+.supp-container {
+    max-width: 1280px;
+    justify-content: space-evenly;
+
+}
+
+.support-item {
+    color: #bfbfbf;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.support-item a {
+    text-decoration: none;
+
+}
+
+.support-icon p {
+    text-decoration: none;
+    color: inherit;
+}
+
+.support-icon {
+    width: 60px;
+    color: #bfbfbf;
+
+}
+
+.support-text {
+    color: #bfbfbf;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.support-item:hover .support-icon {
+    color: #bfbfbf;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.support-item:hover .support-text {
+    color: white;
+    transform: translateY(2px);
+}
+
+.form-control {
+    outline: none;
+}
+
+.footer-sec-img {
+    display: flex;
+    margin: 10px;
+    gap: 20px;
+    height: 50px;
+    justify-content: center;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.section-footer .pro-line {
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-color: white
+}
+
+.follow-icon {
+    display: flex;
+    padding: 0px 10px 10px 10px;
+    margin: 10px 8px;
+    justify-content: center;
+    font-size: 100px;
+
+}
+
+.follow-icon li {
+    height: 20px;
+    background-color: black;
+    color: rgb(62, 59, 59);
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    margin: 8px;
+    padding: 10px;
+    align-items: center;
+}
+
+.follow-icon li:hover {
+    background-color: white;
+    color: rgb(93, 93, 95);
+    border-radius: 50%;
+}
+
+.follow-icon li i {
+    align-items: center;
+    font-size: 24px;
+}
+
+.follow-icon a {
+    text-decoration: none;
+}
+
+.copywrt-txt {
+    padding: 0px 10px 50px 10px;
+    font-size: 11px;
+    color: rgb(102, 102, 102);
+    text-align: center;
 }
