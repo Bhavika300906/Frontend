@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name":"Het patel",
+        "course":"Front-end"
+    },
+    {
+        "id":2,
+        "name":"harnish patel",
+        "course":"back-end"
+    },
+    {
+        "id":3,
+        "name":"Rahul",
+        "course":"Front-end"
+    },
+    {
+        "id":4,
+        "name":"raj patel",
+        "course":"Full-stack"
+    }
+    
+]

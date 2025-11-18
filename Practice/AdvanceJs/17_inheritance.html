@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- inhrintace :- one class to another class data pass -->
+
+    <!-- total 5 type inhritance 
+    1) single A - B 
+    2) multi-level A - B - C 
+    3) multiple not use js A - B , B - C  
+    4) hyrachical :- A - B , A - C
+    5) hybrid :- any two inhritance combine -->
+
+    <!-- syntax :- 
+    class A{
+
+    }
+
+    class B extends A {
+
+    } -->
+    
+
+    <script>
+        class A{
+            sum(){
+                console.log("Class A property")
+            }
+        }
+
+        class B extends A {
+            sub(){
+                console.log("Class B property")
+            }
+        }
+
+        const user = new B 
+        console.log(user)
+
+        user.sum()
+        user.sub()
+
+    </script>
+</body>
+</html>

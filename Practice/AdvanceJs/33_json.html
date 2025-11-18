@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- json :- javascript object notation string -->
+
+    <!-- 1) light wight
+         2) easy to read and use
+         3) javascript direct read data 
+    -->
+
+    <!-- 
+        let json = `[
+            {
+                "id":1,
+                "name":"Shubham",
+                "course":"front-end"
+            }
+        ]`
+
+        let object = [
+            {
+                id : 1,
+                name : "shubham",
+                course : "Front-end"
+            }
+        ]
+    -->
+
+
+    <script>
+
+        let jsondata = `
+            [
+                {
+                    "id":1,
+                    "name":"Shubham",
+                    "Course":"Front-end"
+                },
+                {
+                    "id":2,
+                    "name":"jiger",
+                    "Course":"back-end"
+                },
+                {
+                    "id":3,
+                    "name":"Het",
+                    "Course":"Full-stack"
+                }
+            ]
+        `;
+
+        // console.log(jsondata)
+        // document.writeln(jsondata)
+
+        // json to object/arrayq /parse method
+        let data = JSON.parse(jsondata)
+
+        console.log(data)
+
+        for(let user of data){
+            // console.log(user.name)
+            document.write(`<h1>id : ${user.id} name : ${user.name} course : ${user.Course}</h1>`)
+        }
+
+
+        let objetdata= [
+            {
+                id:1,
+                name : "harsh",
+                course :"Front-end"
+            },
+            {
+                id:2,
+                name : "varj",
+                course :"back-end"
+            },
+            {
+                id:3,
+                name : "monika",
+                course :"MERN"
+            }
+        ]
+
+        console.log(objetdata)
+
+        // json method strigfiy
+
+        let jsond = JSON.stringify(objetdata)
+
+        console.log(jsond)
+
+    </script>
+
+</body>
+</html>

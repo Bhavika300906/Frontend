@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <!-- static :- method defult method always class access -->
+
+
+    <script>
+        class xy{
+            constructor(){
+                console.log("hello constro")
+            }
+            x = function data(){
+                console.log("hello data function")
+            }
+
+            data2(){
+                console.log("hello data 2 function")
+            }
+            static demo(){
+                console.log("Static data")
+            }
+           
+        }
+
+        const user = new xy
+        xy.demo()
+
+    </script>
+</body>
+</html>

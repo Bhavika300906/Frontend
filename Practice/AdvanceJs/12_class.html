@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class :- collection of data memeber(varibale) and member function(function) its class.
+        it's a blue print of object 
+    -->
+
+    <!-- syntax :-
+    
+    class class-name{
+        memebrfunction(){
+            datambeber
+        }
+        member function(){
+            data
+        }
+    }
+    
+    const data = new class-name
+
+    -->
+
+    <script>
+
+        var blance = 1000;
+
+        class Bank{
+            // member function
+            z = function show(){
+                let balnce = 1000;
+            }
+            x = function detils(pin,blance){
+                // data member
+                let bankname = "HDFC";
+                let bankIfSc = "HDFC000H";
+                let pinnum = pin;
+                let bankblance = blance;
+
+                console.log("bank name : ",bankname)
+                console.log("bank ifsc : ",bankIfSc)
+                console.log("Pin nmber : ",pinnum)
+                console.log("bank balnce : ",bankblance)
+            }
+            y = function Deposit(add){
+
+                blance = blance + add;
+                parseInt(blance)
+                console.log("hello this deposit function")
+            }
+        }
+
+        // console.log(Bank)
+
+        const mohit = new Bank;
+        console.log(mohit)
+        mohit.x(123,4000)
+
+        const het = new Bank;
+        console.log(het)
+        het.y()
+        het.x(345,6000)
+
+    </script>
+
+
+</body>
+</html>

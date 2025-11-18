@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //current time 
+        let date = new Date();
+        console.log(date)
+
+        // two method date 
+        // 1) get method
+        console.log(date.getDate())
+        console.log(date.getDay())
+        console.log(date.getFullYear())
+        console.log(date.getHours())
+        console.log(date.getMinutes())
+        console.log(date.getMonth())
+        console.log(date.getTime())
+
+        // 2) set method
+        date.setDate(10)
+        console.log(date.getDate())
+
+        date.setFullYear(2023)
+        console.log(date.getFullYear())
+
+        date.setHours(13)
+        console.log(date.getHours())
+    </script>
+</body>
+</html>

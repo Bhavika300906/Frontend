@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fetch :- promise -->
+    <!-- 
+        fetch("urlpath",{
+            method : "GET"
+        })
+        .then(covnert text file string)
+        .then(print javscript)
+        .catch(data error show)
+    -->
+
+    <script>
+        fetch("data.txt",{
+            method:"GET"
+        })
+        .then((res)=>{
+            // text file string 
+            return res.text()
+        })
+        .then((data)=>{
+            console.log(data)
+            document.writeln(data)
+        })
+        .catch((error)=>{
+            console.log(data)
+        })
+    </script>
+</body>
+</html>

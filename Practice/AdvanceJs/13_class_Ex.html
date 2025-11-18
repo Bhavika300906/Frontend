@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Arith{
+            // with stroge and without para
+            x = function sum(){
+                // data member
+                let a = 20
+                let b= 10;
+                console.log("sum => ",a+b)
+            } 
+
+            // with stroge and with para 
+            y = function sub(a,b){
+                console.log("Sub => ",a-b)
+            }
+            
+            // without stroge and without para 
+            mul(){
+                let a =30;
+                let b= 20;
+                console.log("Mul => ",a*b)
+            }
+
+            // without stroge and with para 
+            divi(a,b){
+                console.log("divi => ",a/b)
+            }
+        }
+
+        // console.log(Arith)
+
+        const user = new Arith;
+        console.log(user)
+        user.mul()
+        user.mul()
+
+        user.divi(50,5)
+
+        user.x()
+        user.y(50,20)
+
+        const user1 = new Arith;
+        user1.mul()
+
+    </script>
+</body>
+</html>

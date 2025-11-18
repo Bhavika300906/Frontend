@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- simple crud -->
+
+    <script>
+
+        const getuser = async()=>{
+            const res = await axios.get("https://jsonplaceholder.typicode.com/users")
+            console.log(res.data)
+            for(let data of res.data){
+                console.log(data)
+                document.write(`<h2>id : ${data.id} name : ${data.name} email : ${data.email}</h2>`)
+            }
+        }
+
+        getuser()
+
+    </script>
+
+</body>
+</html>

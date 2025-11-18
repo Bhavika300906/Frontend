@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- constru :-  automatically need object creted . class have only one constru -->
+
+    <script>
+        class xy{
+              constructor(){
+                console.log("hello constro")
+            }
+            x = function data(){
+                console.log("hello data function")
+            }
+
+            data2(){
+                console.log("hello data 2 function")
+            }
+            // constructor(){
+            //     console.log("hello")
+            // }
+        }
+
+        const user = new xy
+        console.log(user)
+        user.data2()
+
+    </script>
+</body>
+</html>

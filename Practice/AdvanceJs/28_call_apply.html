@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let data = {
+            fullname : function details(city,state){
+                console.log("fname => ",this.fname," lname => ",this.lname," city => ",city, " state =>",state)
+            }
+        }
+
+        let person = {
+            fname : "het",
+            lname : "patel"
+        }
+
+        let person1 = {
+             fname : "harsh",
+             lname : "patel"
+        }
+        // call sparte argument
+        data.fullname.call(person,"surat","gujarat")
+
+        // apply method array argument
+        data.fullname.apply(person1,["rajkot","gujarat"])
+
+
+    </script>
+
+</body>
+</html>
