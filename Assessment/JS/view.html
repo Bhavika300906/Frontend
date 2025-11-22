@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - View Submissions</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Submitted Tasks</h2>
+
+            <!-- Search bar -->
+            <input type="text" id="searchInput" placeholder="Search by Title or Status" class="search-input">
+
+            <!-- Buttons -->
+            <div class="btn-group">
+                <button id="refreshBtn">Refresh</button>
+                <button id="clearAllBtn" class="btn-clear">Clear All</button>
+                <a href="/index.html" class="btn-link">Back to Form</a>
+            </div>
+
+            <!-- Table -->
+            <div class="table-wrapper">
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskBody"></tbody>
+                </table>
+            </div>
+
+            <!-- No Data -->
+            <p id="noData" class="no-data" hidden>No data found.</p>
+
+        </div>
+
+    </div>
+
+    <script src="/Script/app.js"></script>
+
+</body>
+
+</html>

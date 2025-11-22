@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Add Task</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Task Creation Form</h2>
+
+            <form id="taskForm" novalidate>
+
+                <!-- TITLE -->
+                <label>Task Title</label>
+                <input type="text" id="title" name="title" required pattern=".{10,}"
+                    title="Title must contain at least 10 characters" placeholder="Enter task title">
+                <small id="error-title" class="error-msg"></small>
+                <small id="success-title" class="success-msg"></small>
+
+                <!-- DESCRIPTION -->
+                <label>Description</label>
+                <textarea id="description" name="description" required pminlength="1" maxlength="500" pattern=".{1,500}"
+                    title="Description must be between 1 and 500 characters"
+                    placeholder="Enter description (max 500 characters)"></textarea>
+                <small id="error-description" class="error-msg"></small>
+                <small id="success-description" class="success-msg"></small>
+
+                <!-- DATE -->
+                <label>Due Date</label>
+                <input type="date" id="dueDate" name="dueDate" required>
+                <small id="error-date" class="error-msg"></small>
+                <small id="success-date" class="success-msg"></small>
+
+                <!-- PRIORITY + STATUS -->
+                <div class="row">
+                    <div class="col">
+                        <label>Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="">Select Priority</option>
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                        <small id="error-priority" class="error-msg"></small>
+                        <small id="success-priority" class="success-msg"></small>
+                    </div>
+
+                    <div class="col">
+                        <label>Status</label>
+                        <select id="status" name="status" required>
+                            <option value="">Select Status</option>
+                            <option>To Do</option>
+                            <option>In Progress</option>
+                            <option>Done</option>
+                        </select>
+                        <small id="error-status" class="error-msg"></small>
+                        <small id="success-status" class="success-msg"></small>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">Add Task</button>
+                <button type="button" id="clearBtn" class="btn-clear">Clear</button>
+                <a href="/view.html" class="btn-link">View Submissions</a>
+
+            </form>
+
+            <div id="formMessage"></div>
+        </div>
+
+        <!-- PREVIEW LAST 4 -->
+        <div class="card">
+            <h3>Latest Tasks</h3>
+            <ul id="previewList"></ul>
+        </div>
+
+    </div>
+
+    <script src="/Script/app.js"></script>
+
+</body>
+
+</html>
