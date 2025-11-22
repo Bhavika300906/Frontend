@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <p><label for="name">First Name:</label>
+        <input type="text" id="name" name="name" required>
+        </p>
+
+        <p><label for="middle-name">Middle Name:</label>
+        <input type="text" id="middle-name" name="middle-name" required> </p>
+
+        <p><label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required> </p>
+
+        <p><label for="email">Email:</label>
+        <input type="email" id="email" name="email" required></p>
+        <!-- pattern ?[] >> a-zA-Z0-9, {} length-range --->
+
+        <p> <label for="course">Course:</label>
+        <select name="course">
+            <option value="">--Select Course--</option>
+            <option value="bsc">B.Sc IT</option>
+            <option value="bca">BCA</option>
+            <option value="bcom">B.Com</option>
+            <option value="mba">MBA</option>
+        </select> </p>
+
+        <p><label for="gender">Gender:</label> </p>
+        <p> <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label> </p>
+
+        <p> <label for="phone">Phone: +91 </label>
+        <input type="tel" id="phone" name="phone" required> </p>
+
+        <p><label for="address">Address:</label></p>
+        <p><textarea id="address" name="address" rows="5" cols="100"></textarea></p>
+
+        <p><label for="email">Email:</label>
+        <input type="email" id="email" name="email"> </p>
+
+        <p><label for="password">Password:</label>
+        <input type="password" id="password" name="password"> </p>
+
+        <p><label for="re-type password">Re-type Password:</label>
+        <input type="password" id="re-type password" name="re-type password"> </p>
+
+        <p align="left"><button type="submit">Submit</button></p>
+    </form>
+</body>
+
+</html>
