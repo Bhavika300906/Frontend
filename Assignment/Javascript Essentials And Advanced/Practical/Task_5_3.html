@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>5. Loops (For, While, Do-While)</h2>
+    <input type="textbox" id="userInput" placeholder="Enter number more than 10">
+
+    <button onclick="checkNumber()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let input;
+
+            do {
+                input = document.getElementById("userInput").value;
+
+            } while (input <= 10);
+
+            document.getElementById("result").innerText =
+                "You entered: " + input;
+        }
+
+    </script>
+</body>
+
+</html>

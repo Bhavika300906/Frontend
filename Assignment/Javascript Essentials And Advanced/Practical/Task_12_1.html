@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Error Handling Example</title>
+</head>
+
+<body>
+
+    <script>
+        try {
+            let num = 10;
+            let result = num / 2;  // division by zero
+
+            if (!isFinite(result)) {       // check for Infinity
+                throw "Cannot divide a number by zero!";
+            }
+
+            console.log(result);
+        }
+        catch (error) {
+           document.write("Error: " + error);
+        }
+    </script>
+
+</body>
+
+</html>
