@@ -1,316 +1,38 @@
-/* ===============================
-   GLOBAL PAGE STYLING
-================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Custom styles for better aesthetics and validation feedback */
 body {
-  font-family: "Poppins", sans-serif;
-  background: #f3f6fa;
-  padding: 20px;
-  color: #333;
+  background-color: #f7f9fc;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+.form-container {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 1rem;
+  /* Rounded corners */
 }
 
-/* ===============================
-   CARD DESIGN
-================================= */
-
-.card {
-  background: #ffffff;
-  padding: 22px;
-  margin-bottom: 25px;
-  border-radius: 14px;
-  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-h2, h3 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-weight: 600;
+/* Bootstrap's form-control is used, we just ensure error message space */
+.error-message {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #dc3545;
+  /* Bootstrap's red */
+  height: 1.25rem;
+  /* Reserve space to prevent layout shift */
 }
 
-/* ===============================
-   FORM ELEMENTS
-================================= */
-
-label {
-  font-weight: 600;
-  display: block;
-  margin-top: 18px;
-  margin-bottom: 5px;
+/* Message Box styling */
+#message-box {
+  z-index: 1050;
+  /* Above modals/navbars */
+  pointer-events: none;
+  /* Allows clicks to pass through */
 }
 
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 2px solid #d6d6d6;
-  background: #fcfcfc;
-  font-size: 15px;
-  transition: 0.2s ease;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #4c87ff;
-  outline: none;
-}
-
-/* TEXTAREA */
-textarea {
-  resize: none;
-  height: 90px;
-}
-
-/* 2 COLUMN LAYOUT */
-.row {
-  display: flex;
-  gap: 18px;
-}
-
-.col {
-  flex: 1;
-}
-
-/* ===============================
-   BUTTONS
-================================= */
-
-button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  background: #4c87ff;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.2s;
-}
-
-button:hover {
-  background: #3a6fe0;
-}
-
-.btn-clear {
-  background: #e0e0e0;
-  color: #333;
-  margin-top: 12px;
-}
-
-.btn-clear:hover {
-  background: #cacaca;
-}
-
-.btn-link {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 600;
-  color: #4c87ff;
-  margin-top: 14px;
-}
-
-/* ===============================
-   VALIDATION MESSAGES
-================================= */
-
-.error-msg {
-  color: red;
-  font-size: 14px;
-  margin-top: 3px;
-}
-
-.success-msg {
-  color: green;
-  font-size: 14px;
-  margin-top: 3px;
-}
-
-/* ===============================
-   PREVIEW LIST (LATEST TASKS)
-================================= */
-
-#previewList {
-  list-style: none;
-  padding: 0;
-}
-
-#previewList li {
-  padding: 10px;
-  border-bottom: 1px solid #ececec;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* PRIORITY BADGES */
-.preview-badge {
-  padding: 5px 9px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.badge-priority-High { background: #ffe5e5; color: #b82e2e; }
-.badge-priority-Medium { background: #fff2cc; color: #856500; }
-.badge-priority-Low { background: #e5ffe9; color: #1e7f4a; }
-
-/* ===============================
-   TABLE (VIEW PAGE)
-================================= */
-
-.table-wrapper {
-  overflow-x: auto;
-  margin-top: 18px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-thead {
-  background: #eef2f8;
-}
-
-th {
-  padding: 14px;
-  font-weight: 600;
-  font-size: 15px;
-  text-align: left;
-}
-
-td {
-  padding: 12px;
-  border-bottom: 1px solid #ebebeb;
-  font-size: 14px;
-}
-
-tr:last-child td {
-  border-bottom: none;
-}
-
-/* NO DATA MESSAGE */
-.no-data {
-  text-align: center;
-  color: #777;
-  font-size: 15px;
-  margin-top: 15px;
-}
-
-/* ===============================
-   SEARCH BAR
-================================= */
-
-.search-input {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #d6d6d6;
-  border-radius: 8px;
-  margin-top: 5px;
-  font-size: 15px;
-}
-
-/* BUTTON GROUP */
-.btn-group {
-  display: flex;
-  gap: 12px;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-#refreshBtn,
-#clearAllBtn {
-  width: auto;
-  padding: 10px 16px;
-  background: #4c87ff;
-  color: white;
-  border-radius: 8px;
-  font-size: 15px;
-}
-
-#clearAllBtn {
-  background: #e34d4d;
-}
-
-/* ===============================
-   EDIT / DELETE BUTTONS
-================================= */
-
-.edit-btn,
-.delete-btn {
-  padding: 6px 10px;
-  font-size: 13px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.edit-btn {
-  background: #4c87ff;
-  color: white;
-}
-
-.delete-btn {
-  background: #e34d4d;
-  color: white;
-}
-
-/* ===============================
-   RESPONSIVE TABLE FOR MOBILE
-================================= */
-
-@media (max-width: 600px) {
-
-  .row {
-    flex-direction: column;
-  }
-
-  table thead {
-    display: none;
-  }
-
-  table,
-  table tbody,
-  table tr,
-  table td {
-    display: block;
-    width: 100%;
-  }
-
-  table tr {
-    margin-bottom: 16px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 12px;
-    background: white;
-  }
-
-  table td {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 5px;
-  }
-
-  table td::before {
-    content: attr(data-label);
-    font-weight: 600;
-    color: #444;
-  }
+.toast-custom {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: auto;
 }
