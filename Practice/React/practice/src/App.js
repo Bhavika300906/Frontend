@@ -1,11 +1,43 @@
 import React from "react";
-
+// import ClassCompo from "./Component/ClassCompo";
+// import FuncComp from "./Component/FuncComp";
+// import Hello from "./JSX/Hello";
+// import Style from "./Style/Style";
+// import ClassProps from "./Props/ClassProps";
+// import MainProps from "./Props/MainProps";
+// import FunProps from "./Props/FunProps";
+// import MainState from "./State/MainState";
+import UseAx from "./Axios/UseAxi-tD";
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello, World!</h1>
-    </div>
-  );
-}   
+    return (
+        <div>
+            {/* <h1>Hello this my react app </h1> */}
+            {/* Component */
+            }
+            {/* Class Compo */}
+            {/* <ClassCompo /> */}
+
+            {/* Fun Compo */}
+            {/* <FuncComp /> */}
+
+            {/* JSX Component */}
+            {/* <Hello /> */}
+
+            {/* Style  */}
+            {/* <Style /> */}
+
+            {/* Props */}
+            {/* <MainProps /> */}
+           
+
+            {/* State */}
+            {/* <MainState /> */}
+
+            {/* Axios */}
+            <UseAx />
+
+        </div>
+    );
+}
 
 export default App
