@@ -1,23 +1,22 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
-function UseAxi() {
-    const [name, setname] = useState([])
+function UseAxiTD() {
+
+    const [user, setuser] = useState([])
 
     useEffect(() => {
         fetchdata()
     }, [])
+
     const fetchdata = async () => {
         try {
-            const res = await axios.get('https://jsonplaceholder.typicode.com/users')
-            setname(res.data)
-            // console.log(res.data); 
+            const res = await axios.get("https://jsonplaceholder.typicode.com/users")
+            console.log(res.data)
+            setuser(res.data)
         } catch (error) {
             console.log("Api data not Found")
         }
-        // const res = await axios.get('https://jsonplaceholder.typicode.com/users')
-        // setuser(res.data)
-        // console.log(res.data);  
     }
 
     return (
@@ -31,12 +30,12 @@ function UseAxi() {
                             <th scope="col">name</th>
                             <th scope="col">email</th>
                             <th scope="col">address</th>
-                            <th scope="col">company</th>
+                            <th scope="col">compnay</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            name && name.map((data, index) => {
+                            user && user.map((data, index) => {
                                 // console.log(data)
                                 return (
                                     <tr key={index}>
@@ -51,9 +50,10 @@ function UseAxi() {
                         }
                     </tbody>
                 </table>
+
             </div>
-        </div >
+        </div>
     )
 }
 
-export default UseAxi
+export default UseAxiTD

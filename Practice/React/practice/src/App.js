@@ -7,7 +7,11 @@ import React from "react";
 // import MainProps from "./Props/MainProps";
 // import FunProps from "./Props/FunProps";
 // import MainState from "./State/MainState";
-import UseAx from "./Axios/UseAxi-tD";
+// import UseAxiTD from "./Axios/UseAxiTD";
+// import UseAxiCard from "./Axios/UseAxiCard";
+// import CardDum from "./UseEffect-Axios/CardDum";
+// import TableDum from "./UseEffect-Axios/TableDum";
+import MainContext from "./Context/MainContext";
 function App() {
     return (
         <div>
@@ -28,13 +32,19 @@ function App() {
 
             {/* Props */}
             {/* <MainProps /> */}
-           
+
 
             {/* State */}
             {/* <MainState /> */}
 
             {/* Axios */}
-            <UseAx />
+            {/* <UseAxiTD /> */}
+            {/* <UseAxiCard /> */}
+            {/* <CardDum/> */}
+            {/* <TableDum/> */}
+
+            {/* Context */}
+            <MainContext />
 
         </div>
     );
