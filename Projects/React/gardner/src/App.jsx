@@ -6,7 +6,7 @@ import Services from './Website/Pages/Services.jsx'
 import Project from './Website/Pages/Project.jsx'
 import Features from './Website/Pages/Features.jsx'
 import Quote from './Website/Pages/Quote.jsx'
-import Team from './Team.jsx'
+import Team from './Website/Pages/Team.jsx'
 import Testimonial from './Website/Pages/Testimonial.jsx'
 import Not404 from './Website/Pages/Not404.jsx'
 

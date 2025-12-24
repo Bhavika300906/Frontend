@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './Website/Common/Header'
-import Pages from './Website/Common/Pages'
-import Footer from './Website/Common/Footer'
+import Header from '../Common/Header'
+import Pages from '../Common/Pages'
+import Footer from '../Common/Footer'
 
 function Team() {
     return (
