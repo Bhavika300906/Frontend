@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Digital Clock</title>
+</head>
+
+<body>
+    <h2>11. JavaScript Timing Events - setInterval</h2>
+    <h1 id="clock"> </h1>
+
+    <script>
+        function updateClock() {
+            let now = new Date();
+            let time = now.toLocaleTimeString();
+            document.getElementById("clock").textContent = time;
+        }
+
+        // Update the clock every 1 second (1000 ms)
+        setInterval(updateClock, 1000);
+
+        // Call the function once immediately
+        updateClock();
+    </script>
+
+</body>
+
+</html>

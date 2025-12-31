@@ -1,0 +1,61 @@
+#contactForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* Style the entire form area */
+#contactForm {
+    background-color: #f2f9ff;       
+    width: 350px;
+    padding: 20px;
+    font-family: "Noto Sans KR";
+    margin: 40px auto;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 119, 182, 0.3);
+}
+
+/* Space between form groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input and textarea fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 0; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+#submitBtn {
+    background-color: #0077b6;
+    font-family: "Noto Sans KR";
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Hover effect for button */
+#submitBtn:hover {
+    background-color: #005f8a;
+}
+
+/* Heading style */
+h2 {
+    text-align: center;
+    color: #005f8a;
+    margin-top: 30px;
+    font-family: "Noto Sans KR";
+}

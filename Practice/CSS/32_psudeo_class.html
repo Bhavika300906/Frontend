@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:first-child{
+            background-color: red;
+        }
+        ul li:last-child{
+            background: lawngreen;
+        }
+        ul li:nth-child(3){
+            background: goldenrod;
+        }
+        ul li:nth-child(4){
+            background: lightcoral;
+        }
+        ul li:nth-child(odd){
+            background: green;
+        }
+        ul li:nth-child(even){
+            background: lightcoral;
+        }
+        ul li:nth-last-child(1){
+            background: rebeccapurple;
+        }
+        .main{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            transition: 1s;
+        }
+        .main:hover{
+            background: lightcoral;
+            transform: translate(50px,50px);
+            font-size: 50px;
+        }
+        input{
+            margin-top: 50px;
+            border: none;
+            outline: 2px solid green;
+        }
+        input:focus{
+            color: red;
+            background: aqua;
+            outline: 2px solid navy;
+        }
+    </style>
+</head>
+<body>
+    <!-- : psude_class -->
+     <!-- :: psudeo _ element -->
+     
+     <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+          <li>seven</li>
+     </ul>
+
+     <div class="main">
+        Shubham
+     </div>
+
+     <input type="text" placeholder="Enter your name">
+</body>
+</html>

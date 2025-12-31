@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- promise :- success,reject
+     
+    1)pending :- hold data Api 
+    2)fullfield :- Data Show view completed state
+    3)reject :- data not show
+
+    syntax :- 
+
+    let para = new Promise(function(suc,rej)){
+
+        ...code
+    }
+
+    -->
+
+
+    <script>
+
+        let data = new Promise(function(res,rej){
+            let num = 10
+            if(num === 11){
+                // console.log("data will show")
+                res("data will show")
+            }
+            else{
+                // console.log("Data not Show")
+                rej("Data not Show")
+            }
+        })
+
+        console.log(data)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1) block inner block yes allow  -->
+
+    <div>
+        hello this div tag
+        <p>This para tag</p>
+    </div>
+
+    <!-- 2) block inner inline tag yes allow -->
+    <div>
+        Lorem ipsum dolor <b>sit amet consectetur</b> adipisicing elit. Ab ipsa ratione laboriosam distinctio facilis
+        repellendus nemo <i>consequatur, illum libero</i> corporis sed adipisci voluptas nam, perferendis dolorum suscipit
+        eaque. Qui, ea! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iste culpa dignissimos,
+        necessitatibus <u>sapiente recusandae dolor</u> consequuntur corrupti magnam perspiciatis nesciunt tenetur ut. Error,
+        adipisci nesciunt quia quasi beatae minus.
+    </div>
+    <!-- 3) inline inner inline tag yes allow  -->
+
+    <b>Hello <i><u>this bold</u></i> data</b>
+
+    <br>
+    <!-- 4) inlin inner block will not allow (particle work) -->
+
+    <b>Hello this bold 
+        <h1>Hello this h1</h1>
+    </b>
+
+    <!-- text  -->
+</body>
+
+</html>

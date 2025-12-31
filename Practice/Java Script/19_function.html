@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Function :- it's block of code. whenere need when we use it.(call it)
+    () -->
+
+    <!-- type of 2
+    1) predefined fucntion :- already define 
+    2) user definded :- user creted -->
+
+
+    <!-- syntax :- 
+    Function func-name(){
+        ..logic 
+    }
+    func-name() -->
+
+
+    <script>
+
+        // pre defined 
+        // console.log("hello")
+        // console.log("2")
+        // document.write("hello")
+        // alert("ehllo")
+        // print 
+
+
+        // 2 user definde 
+        // 1) without paramter 
+        console.log(sub(50, 20))
+
+        add(90, 10)
+        let a = 20, b = 10
+
+        function sum() {
+            let sum = a + b;
+            console.log("sum =>", sum)
+        }
+        sum()
+        sum()
+
+        // 2)with paramter 
+
+        // nan :- not a number
+        // ref/argu/paramter :-  same ?
+
+        function add(a, b) {
+            console.log("add =>", a + b)
+        }
+        add(30, 20)
+        add(50, 20)
+
+
+        function sub(x, y) {
+            return x - y
+        }
+        console.log("sub", sub(40, 20))
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+/* Custom styles for better aesthetics and validation feedback */
+body {
+  background-color: #f7f9fc;
+}
+
+.form-container {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 1rem;
+  /* Rounded corners */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Bootstrap's form-control is used, we just ensure error message space */
+.error-message {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #dc3545;
+  /* Bootstrap's red */
+  height: 1.25rem;
+  /* Reserve space to prevent layout shift */
+}
+
+/* Message Box styling */
+#message-box {
+  z-index: 1050;
+  /* Above modals/navbars */
+  pointer-events: none;
+  /* Allows clicks to pass through */
+}
+
+.toast-custom {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: auto;
+}

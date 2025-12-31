@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- method -->
+
+    <script>
+        let arr = [1,2,3,4,5]
+        console.log(arr)
+        console.log(arr.length)
+        console.log(arr[2])
+
+        // after add push
+        arr.push(6)
+        console.log(arr)
+
+
+        // pop after remove
+        arr.pop()
+        console.log(arr)
+
+        // forEach 
+        // arr.forEach((v,i)=>{
+        //     console.log(v)
+        // })
+
+        // add two array
+        let arr1 = [6,7,8,9,10]
+        console.log(arr.concat(arr1))
+
+        // before add arr unshift
+        console.log(arr)
+        arr.unshift(0)
+        console.log(arr)
+
+        // before remove shift
+        arr.shift()
+        console.log(arr)
+
+        // arr reves
+        console.log(arr.reverse())
+
+
+        const animals = ["ant", "bison", "camel", "duck", "elephant"];
+        console.log(animals)
+        // console.log(animals.slice(2))
+        console.log(animals.slice(1,4))
+
+
+        const words = ["spra", "elite", "exuberant", "destruction", "present"];
+
+        const res =  words.filter((data) => data.length <= 5  )
+
+        console.log(res)
+
+    </script>
+</body>
+</html>

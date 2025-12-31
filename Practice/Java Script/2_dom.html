@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Dom :- Document object model -->
+
+    <!-- 1 console.log() :- debug,document body
+        Error find 
+    -->
+
+    <h1 id="h1"></h1>
+
+    <h2 id="h2"></h2>
+
+    <script>
+
+        // 1) console.log
+        console.log("hello");
+        console.log("hello2");
+        console.log("Javascript");
+
+        // console.log("hello"); console.log("asdhbuj");
+        console.log(5 + 5)
+        console.log("sum =>", 10 + 10)
+
+        // 2) documet . write (text)
+        document.write("hello javascript <br>");
+        document.writeln("<br>hellp")
+        document.write("<br>sum =>", 10 + 29)
+        document.writeln("<h2>Hello</h2>")
+
+
+        // 3)Document innterTEXT
+        console.log(document.getElementById("h1"))
+        // innerTEXT :- text only print tag not allow
+        document.getElementById("h1").innerText = "<i>Hello innerText method</i>"
+
+        console.log(document.getElementById("h2"))
+
+        // 4)  innerHTML
+        // innerHTML :- text and tag allow
+        document.getElementById("h2").innerHTML = "<i>HEllo innerHTML method</i>"
+
+    </script>
+</body>
+
+</html>

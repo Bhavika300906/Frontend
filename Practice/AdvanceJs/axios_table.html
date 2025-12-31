@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <table border="5" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FName</th>
+                <th>LName</th>
+                <th>M-No.</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        const fetchaxios = async () => {
+            const res = await axios.get("https://691c1a773aaeed735c8f8aa4.mockapi.io/person")
+            let per = res.data.map((item) => { 
+                console.log(item)
+
+                return (
+                    `
+                        <tr>    
+                            <td>${item.id}</td>
+                            <td>${item.Fname}</td>
+                            <td>${item.Lname}</td>
+                            <td>${item['M-No']}</td>
+                        </tr>
+                        `
+                )
+            })
+
+            document.querySelector("tbody").innerHTML = per.join("") 
+        }
+
+        fetchaxios()
+
+    </script>
+</body>
+
+</html>

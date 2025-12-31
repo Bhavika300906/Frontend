@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+
+    <h1>Task 3</h1>
+
+    <script>
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //         document.write(j);
+        //     }
+        //     document.write("<br>");
+        // }
+        // document.write("<br>");
+
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //         document.write(i);
+        //     }
+        //     document.write("<br>");
+        // }
+        // document.write("<br>");
+        let num = 1;
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += num + " ";
+                num++;
+            }
+            document.write(row + "<br>");
+        }
+        let charCode = 97; // 'a'
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += String.fromCharCode(charCode) + " ";
+                charCode++;
+            }
+            document.write(row + "<br>");
+        }
+        
+        let num2 = 1;
+        let rows = 5;
+        for (let i = 1; i <= rows; i++) {
+            let row = " ".repeat((rows - i) * 2); // spaces for alignment
+            for (let j = 1; j <= i; j++) {
+                row += num2 + " ";
+                num2++;
+            }
+            document.write(row + "<br>");
+        }
+
+
+    </script>
+</body>
+
+</html>

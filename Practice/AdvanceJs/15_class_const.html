@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Arith{
+            constructor(a,b){
+                this.a = a;
+                this.b = b;
+                console.log("A => ",this.a)
+                console.log("B => ",this.b)
+            }
+
+            sum(){
+                console.log("Sum =>",this.a + this.b)
+            }
+            sub(){
+                console.log("Sub =>",this.a - this.b)
+            }
+            mul(){
+                console.log("mul =>",this.a * this.b)
+            }
+            divi(){
+                console.log("divi =>",this.a / this.b)
+            } 
+        }
+
+        const data = new Arith(30,10)
+        console.log(data)
+        data.sum()
+        data.sub()
+
+        const user = new Arith(50,20)
+
+
+
+
+    </script>
+</body>
+</html>

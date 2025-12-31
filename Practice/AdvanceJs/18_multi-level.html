@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- syntax :- 
+    class A{
+
+    }
+
+    class B extends A {
+
+    } 
+    
+    class C extends B {
+    }
+    
+    c
+    -->
+
+
+    <script>
+         class A{
+            sum(){
+                console.log("Class A property")
+            }
+        }
+
+        class B extends A {
+            sub(){
+                console.log("Class B property")
+            }
+        }
+        
+        class C extends B {
+            divi(){
+                console.log("class C property")
+            }
+        }
+
+        const user = new C;
+        console.log(user)
+
+        user.divi()
+        user.sum()
+
+</script>
+
+
+
+</body>
+</html>

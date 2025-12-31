@@ -1,0 +1,858 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utility reuse */
+.container {
+    margin: 0 20px;
+    padding: 0 20px;
+}
+
+/* header start */
+#header {
+    height: 600px;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.logo {
+    font-size: 20px;
+    color: rgb(151, 245, 29);
+}
+
+.list-ul .nav-list {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.nav-list .nav-a {
+    font-size: clamp(14px, 4vw, 20px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Oswald";
+    text-decoration: none;
+}
+
+.logo-2 {
+    font-size: 20px;
+    color: rgb(151, 245, 29);
+}
+
+/*  Hero Start  */
+#hero {
+    color: #fff;
+    padding-top: 50px;
+}
+
+.hero-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-col-hero-left {
+    display: inline-block;
+}
+
+.hero-col-hero-left .ui-title {
+    font-size: clamp(100px, 6vw, 152px);
+    font-weight: 700;
+    font-family: "Krub";
+}
+
+.hero-col-hero-left .beginner {
+    font-size: clamp(45px, 5vw, 55px);
+    color: #ffffff;
+    font-family: "Krub";
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.sub-title {
+    font-size: clamp(18px, 4vw, 25px);
+    font-family: "Krub";
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* CENTER IMAGE */
+.hero-col-hero-center {
+    position: relative;
+    display: inline-block;
+    overflow-wrap: normal;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.hero-col-hero-center .circle {
+    position: absolute;
+    margin-top: 125px;
+    width: clamp(200px, 30vw, 260px);
+    height: clamp(200px, 30vw, 260px);
+    border-radius: 50%;
+    background-color: #a460f9;
+    z-index: 1;
+}
+
+.hero-col-hero-center .hero-img {
+    position: relative;
+    width: clamp(180px, 28vw, 230px);
+    z-index: 2;
+}
+
+/* RIGHT SIDE */
+.hero-col-hero-right {
+    display: inline-block;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.hero-col-hero-right .edition {
+    font-size: 17px;
+    font-weight: 700;
+    font-family: "Krub";
+}
+
+.hero-col-hero-right .ed-2022 {
+    font-size: 29px;
+    margin-left: 5px;
+    font-family: "Krub";
+}
+
+.hero-col-hero-right .guide {
+    font-size: clamp(18px, 5vw, 25px);
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Krub";
+}
+
+.hero-col-hero-right .hero-p {
+    font-size: clamp(14px, 2vw, 20px);
+    text-align: justify;
+    margin: 10px 0 15px 0;
+    max-width: 300px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Krub";
+    text-align: left;
+}
+
+.hero-col-hero-right .hero-buttons {
+    display: flex;
+    margin: 10px 0 15px 0;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 10px 20px;
+    font-size: clamp(14px, 4vw, 20px);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #a460f9;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Oswald";
+}
+
+.btn-secondary {
+    border: none;
+    text-transform: uppercase;
+    font-family: "Oswald";
+    background: transparent;
+    color: #a855f7;
+}
+
+/* Count Section */
+.count {
+    background: #000;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.count-row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.count-box {
+    flex: 1 1 200px;
+    margin: 15px;
+}
+
+.count-number {
+    font-size: clamp(65px, 5vw, 100px);
+    color: #a460f9;
+    font-weight: 500;
+    font-family: "Oswald";
+}
+
+.count-box p {
+    font-size: clamp(35px, 2vw, 60px);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: "Krub";
+    letter-spacing: 1px;
+    color: #ccc;
+}
+
+.count-box p span {
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 5px;
+}
+
+/* challenge Section */
+.challenge {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.challenge-content {
+    position: relative;
+    z-index: 2;
+    width: 500px;
+}
+
+/* Oval background */
+.oval-bg {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 800px;
+    transform: translate(-30%, -48%);
+    opacity: 0.9;
+    text-align: center;
+    z-index: 1;
+}
+
+.challenge-text {
+    position: relative;
+    z-index: 3;
+    font-size: clamp(40px, 10vw, 100px);
+    width: 5px;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-weight: 700;
+    font-family: "Krub";
+    text-align: center;
+}
+
+/* Find Your Course Section*/
+#courses {
+    background: #000;
+    color: #fff;
+    padding: 40px;
+    font-family: "krub";
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.course-header h2 {
+    font-size: clamp(26px, 5.6vw, 40px);
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-weight: 700;
+    font-family: "Krub";
+
+}
+
+.course-header h2 span {
+    font-size: clamp(50px, 10vw, 90px);
+    color: #f2f2f2;
+    font-weight: 400;
+    font-family: "Krub";
+}
+
+.course-header .edition {
+    font-size: clamp(17px, 5vw, 30px);
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Krub";
+}
+
+.course-header .edition .year {
+    font-size: clamp(20px, 4vw, 30px);
+    font-weight: 700;
+    margin-left: 6px;
+    font-family: "Krub";
+}
+
+.course-row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Course Card */
+.course-card {
+    width: 291px;
+    height: 350px;
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    padding: 60px 50px;
+    text-align: center;
+    position: relative;
+    margin: 0 10px 20px 10px;
+}
+
+.course-card .course-number {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background: #fff;
+    color: #000;
+    font-size: clamp(15px, 5vw, 35px);
+    padding: 3px 8px;
+    font-weight: 600;
+    font-family: "Krub";
+}
+
+.course-card h3 {
+    font-size: clamp(20px, 6vw, 35px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-weight: 600;
+    font-family: "Krub";
+}
+
+.course-card h3 span {
+    color: #a460f9;
+    font-size: clamp(20px, 6vw, 35px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Krub";
+}
+
+.course-card .pro-line {
+    width: 80px;
+    margin: 10px 50px;
+    background-color: #5001b1;
+}
+
+.course-card p {
+    font-size: clamp(14px, 7vw, 20px);
+    color: #f2f2f2;
+    font-weight: 600;
+    font-family: "Krub";
+    text-align: center;
+    font-weight: 400;
+}
+
+.btn-course {
+    display: inline-block;
+    background: #a460f9;
+    color: #fff;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.more-opt {
+    text-align: center;
+    margin: 30px;
+    font-size: clamp(18px, 3vw, 28px);
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-weight: 700;
+    font-family: "Krub";
+}
+
+/* about section start */
+#about {
+    background: #000;
+    color: #fff;
+    padding: 60px 0;
+    text-align: left;
+}
+
+#about .container-abt {
+    margin: 0 20px;
+    padding: 0 40px;
+    font-size: 0;
+}
+
+.about-text h2 {
+    font-size: clamp(40px, 6vw, 65px);
+    color: #a460f9;
+    font-family: "Krub";
+}
+
+.about-text h2 span {
+    color: #fff;
+    font-weight: 700;
+}
+
+.about-text,
+.about-image {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.about-text {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.about-image {
+    width: 45%;
+    position: relative;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: clamp(40px, 6vw, 65px);
+    font-family: "Krub";
+    margin-bottom: 20px;
+}
+
+.about-text h2 span {
+    color: #fff;
+    font-weight: 700;
+}
+
+.p-abt {
+    font-size: clamp(20px, 7vw, 30px);
+    font-weight: 700;
+    line-height: 1.6;
+    font-family: "krub";
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.abt-list-container {
+    margin-bottom: 30px;
+}
+
+.abt-list-container li {
+    display: inline-block;
+    width: 45%;
+    margin: 25px 2%;
+    list-style: none;
+    font-weight: 600;
+    font-family: "Krub";
+    vertical-align: top;
+}
+
+.abt-list-container i {
+    color: #a460f9;
+    font-size: 10px;
+    margin-right: 8px;
+}
+
+.btn-about {
+    display: inline-block;
+    background: #a460f9;
+    color: #fff;
+    font-family: "Krub";
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: clamp(18px, 2vw, 25px);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Circle + Image */
+.about-image .circle {
+    width: 395px;
+    height: 395px;
+    background: #a460f9;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.about-image img {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+/* about section close */
+/* why us section start */
+#why-us {
+    background: #000;
+    padding: 80px 0;
+    font-weight: 800;
+    font-family: "Krub";
+    color: #fff;
+}
+
+.why-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 40px 40px;
+}
+
+.why-left {
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+    position: relative;
+}
+
+.circle-why {
+    width: 395px;
+    height: 395px;
+    border-radius: 50%;
+    background: #9b5de5;
+    margin: 0 10px;
+    position: relative;
+}
+
+.person-img {
+    position: absolute;
+    top: 20px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: auto;
+}
+
+.why-right {
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.why-right h2 {
+    font-size: clamp(42px, 2vw, 65px);
+    margin-bottom: 20px;
+}
+
+.why-right .why-why {
+    font-weight: 700;
+    color: #fff;
+}
+
+.why-right .why-us-us {
+    color: #9b5de5;
+}
+
+.why-right p {
+    font-size: clamp(14px, 2vw, 30px);
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.btn-why {
+    background: #9b5de5;
+    border: none;
+    padding: 12px 28px;
+    color: #fff;
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 26px);
+}
+
+/* Why Section close */
+/* Review Section */
+.review {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 80px 10%;
+    font-family: "Krub";
+}
+
+.review-title {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.review-title span {
+    color: #a460f9;
+    font-weight: 500;
+}
+
+.review-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background: transparent;
+    padding: 20px;
+    max-width: 300px;
+    flex: 1 1 250px;
+}
+
+.review-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.review-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.stars {
+    color: #a460f9;
+    font-size: clamp(18px, 5vw, 25px);
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    font-family: "Krub";
+    letter-spacing: 2px;
+    font-size: clamp(18px, 5vw, 25px);
+    color: #ddd;
+    line-height: 1.6;
+    position: relative;
+}
+
+.review-card .quote {
+    color: #a460f9;
+    font-size: clamp(18px, 7vw, 25px);
+    font-weight: bold;
+}
+
+/* Newsletter Section start */
+.newsletter {
+    background: #000;
+    color: #fff;
+    padding: 80px 50px;
+    font-family: "Krub";
+}
+
+.newsletter-container {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-image {
+    width: 50%;
+    text-align: left;
+    display: inline-block;
+    margin: 0 10px;
+
+}
+
+.newsletter-image img {
+    display: inline-block;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.newsletter-content {
+    align-items: center;
+    margin: auto;
+}
+
+.newsletter-content h2 {
+    font-size: clamp(32px, 5vw, 40px);
+    color: #a460f9;
+    font-weight: 800;
+    font-family: "krub";
+    margin-bottom: 15px;
+}
+
+.newsletter-content h2 span {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.newsletter-content p {
+    font-size: 14px;
+    color: #ccc;
+    font-family: "krub";
+    margin: 10px 20px 25px 0;
+}
+
+/* News letter close */
+
+/* News letter Form start */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.newsletter-form input,
+.newsletter-form textarea,
+.newsletter-form button {
+    border: 2px solid #a460f9;
+    background-color: transparent;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.newsletter-form .submit {
+    max-width: 200px;
+    padding: 8px 15px;
+    font-size: clamp(15px, 2vw, 25px);
+    margin: 0 auto;
+    display: block;
+    background-color: #a460f9;
+    color: #fff;
+}
+
+
+.newsletter-form input::placeholder,
+.newsletter-form textarea::placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: clamp(15px, 7vw, 25px);
+}
+
+/* News letter Form end */
+
+/* Footer start */
+.footer {
+    background-color: #8c6eca;
+}
+
+.footer-row {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.footer-row h3 {
+    color: #fff;
+    margin: 10px 50px;
+    font-size: clamp(25px, 5vw, 35px);
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Krub";
+}
+
+.about-us-list {
+    margin: 10px 50px;
+    list-style: none;
+    padding: 0;
+    font-size: clamp(20px, 5vw, 30px);
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Krub";
+}
+
+.what-we-do-list {
+    margin: 10px 50px;
+    list-style: none;
+    padding: 0;
+    font-size: clamp(18px, 5vw, 25px);
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Krub";
+}
+
+.footer-pro-line {
+    width: 80px;
+    margin: 10px 50px;
+    background-color: #5001b1;
+}
+
+.sign-up {
+    margin: 10px 50px;
+    padding: 10px 20px;
+    text-align: right;
+    font-size: clamp(18px, 5vw, 25px);
+    color: #ffffff;
+    font-family: "Krub";
+    background-color: transparent;
+}
+
+.follow-us {
+    display: flex;
+}
+
+.follow-us h3 {
+    font-size: clamp(25px, 5vw, 35px);
+    line-height: 33px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Krub";
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.follow {
+    list-style: none;
+    padding: 5px;
+    margin: 5px 50px;
+    display: flex;
+    align-content: center;
+}
+
+.follow li {
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+}
+
+.follow li i {
+    color: #6b46c1;
+    font-size: clamp(20px, 5vw, 30px);
+}
+
+#sign-up-text {
+    border: 2px solid #fff;
+    background-color: transparent;
+    padding: 10px 40px;
+    margin-bottom: 15px;
+}
+
+/* Footer end */

@@ -1,0 +1,41 @@
+{
+    "admin": [
+        {
+            "id": 1,
+            "name": "admin",
+            "age": 25
+        },
+        {
+            "id": 2,
+            "name": "subadmin",
+            "age": 27
+        },
+        {
+            "id": 3,
+            "name": "super admin",
+            "age": 40
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Het patel",
+            "course": "Front-end"
+        },
+        {
+            "id": 2,
+            "name": "harnish patel",
+            "course": "back-end"
+        },
+        {
+            "id": 3,
+            "name": "Rahul",
+            "course": "Front-end"
+        },
+        {
+            "id": 4,
+            "name": "raj patel",
+            "course": "Full-stack"
+        }
+    ]
+}

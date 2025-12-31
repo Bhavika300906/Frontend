@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            data(){
+                console.log("class A prenet")
+            }
+        }
+        class B extends A{
+            data2(){
+                console.log("Class B Child")
+            }
+        }
+
+        class C extends A{
+            data3(){
+                console.log("Class C child")
+            }
+        }
+
+        const user = new B 
+        user.data2()
+        user.data()
+
+        const user1 = new C
+        user1.data()
+        user1.data3()
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- array :- collection of multiple value store in single varibale  -->
+
+    <script>
+
+        let arr = [1,2,3,4,5,"hello","javascript",6,7,8]
+        console.log(arr)
+
+        // value[index]
+        // console.log(arr[5])
+        // console.log(arr[8])
+
+        // for loop
+
+        // simple for loop index,value
+        // for(let i=0;i<arr.length;i++){
+        //     console.log(i)
+        //     console.log(arr[i])
+        //     console.log(i," => ",arr[i])
+        // }
+
+        // for of value
+        // for(let data of arr){
+        //     console.log(data)
+        // }
+
+        // for in index arfter value
+        // for(let data in arr){
+        //     console.log(data)
+        //     console.log(arr[data])
+        // }
+
+        // forEach  index,value
+        arr.forEach((value,index)=>{
+            console.log(value)
+            console.log(index)
+            document.writeln(`<h4>${index} : ${value}</h4>`)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 200px;
+            width: 200px;
+            background: aqua;
+            /* clip-path: polygon(x y,x y,x y); */
+            clip-path: polygon(50% 0%,0% 100%,100% 100%);
+        }
+        .hexa{
+             height: 200px;
+            width: 200px;
+            background: lightcoral;
+            margin-top: 50px;
+            clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <div class="hexa"></div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- method overloading :- class in function name same and deffent para, compile time  -->
+
+    <!-- method overriding :- function same and class have defferent runtime error -->
+
+
+    <script>
+        // class xy{
+        //     display(a){
+        //         console.log("a => ",a)
+        //     }
+        //     display(a,b){
+        //         console.log("sum =>",a+b)
+        //     }
+        // }
+        // const data = new xy
+        // console.log(data)
+        // data.display(10,20)
+
+        // method overrding
+
+        class A{
+            data(){
+                console.log("A class ...")
+            }
+        }
+        class B extends A{
+            data(){
+                console.log("B class ...")
+            }
+        }
+        class C extends B{
+            data(){
+                console.log("C class ...")
+            }
+        }
+
+        // const user = new C 
+        // console.log(user)
+        // user.data()
+        // user.data()
+
+        const user = [new A,new B,new C ]
+
+        console.log(user)
+        user.forEach((valu)=>{
+            // console.log(valu)
+            valu.data()
+        })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* For big Screens */
+@media (max-width: 1360px) {}
+
+/* For pc Screens */
+@media (max-width: 980px) {}
+
+/* For Tablets and Medium Screens */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .blog-card {
+    padding: 24px;
+  }
+
+  .blog-title {
+    font-size: 22px;
+  }
+
+  .article-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+}
+
+/* For Small Mobiles */
+@media (max-width: 540px) {
+  .header {
+    padding: 24px 13px;
+  }
+
+  .main-title {
+    font-size: 22px;
+  }
+
+  .blog-title {
+    font-size: 19px;
+  }
+
+  .article-content p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 13px;
+    padding: 13px 0;
+  }
+}

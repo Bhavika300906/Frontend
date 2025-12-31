@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- axios :- it's back code data show api data call  
+        get
+        delete
+        post
+        put/patch
+    -->
+
+    <script>
+
+        // const fetchdata=()=>{
+        //     fetch("https://jsonplaceholder.typicode.com/users",{
+        //         method:"GET"
+        //     })
+        //     .then((Res)=>{
+        //         return Res.json()
+        //     })
+        //     .then((data)=>{
+        //         console.log(data)
+        //     })
+        // }
+
+        // fetchdata()
+
+        const fetchaxios=async()=>{
+            const res = await axios.get("https://jsonplaceholder.typicode.com/users")
+            console.log(res.data)
+        }
+
+        fetchaxios()
+
+    </script>
+</body>
+</html>
