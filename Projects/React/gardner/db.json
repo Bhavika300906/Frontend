@@ -1,0 +1,65 @@
+{
+    "admin": [
+        {
+            "id": "1",
+            "name": "admin",
+            "email": "admin@gmail.com",
+            "password": "1234"
+        },
+        {
+            "id": "2",
+            "name": "admin2",
+            "email": "admin2@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": "3",
+            "name": "admin4",
+            "email": "admin4@gmail.com",
+            "password": "12345667"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "name": "Landscaping",
+            "desc": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.",
+            "img": "https://images.pexels.com/photos/4603878/pexels-photo-4603878.jpeg?_gl=1*1xovesp*_ga*MjMyMjUyMjg4LjE3NjQwNzIzNzQ.*_ga_8JE65Q40S6*czE3NjU4ODU5NjQkbzQkZzEkdDE3NjU4ODU5ODQkajQwJGwwJGgw",
+            "logo": "https://th.bing.com/th/id/OIP.d22s1TJDi-DRRLXGEHn4zQHaHa?w=186&h=187&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1"
+        },
+        {
+            "id": "2",
+            "name": "Irrigation & Drainage",
+            "desc": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.",
+            "img": "https://th.bing.com/th/id/OIP.f1aawYuEcjkQfa3ARKdy3QHaE6?w=273&h=181&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1",
+            "logo": "https://th.bing.com/th/id/OIP.WN8A2biGdYPLEljuAt3LKAHaFp?w=257&h=196&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1"
+        },
+        {
+            "id": "3",
+            "name": "Green Technology",
+            "desc": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.",
+            "img": "https://th.bing.com/th/id/OIP.73uOnUVtTwZBgpRBei2yJgHaEo?w=298&h=186&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1",
+            "logo": "https://th.bing.com/th/id/OIP.eoGOpNsvgYlrL5ivvvuUFQHaH0?w=182&h=192&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1"
+        }
+    ],
+    "team": [
+        {
+            "id": "1",
+            "name": "Doris Jordan",
+            "position": "Landscape Designer",
+            "photo": "https://themewagon.github.io/gardener/img/team-1.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Johnny Ramirez",
+            "position": "Garden Designer",
+            "photo":"https://themewagon.github.io/gardener/img/team-2.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Diana Wagner ",
+            "position": "Senior Gardener",
+            "photo": "https://themewagon.github.io/gardener/img/team-3.jpg"
+        }
+    ]
+}
