@@ -16,12 +16,12 @@ function Adm_Serv_add() {
   })
 
   const getchage = (e) => {
-    setservice({ 
+    setservice({
       ...service,
       id: new Date().getTime().toString(),
       [e.target.name]: e.target.value
-     })
-     console.log(service);
+    })
+    console.log(service);
   }
 
   const submitedSer = async (e) => {
@@ -31,7 +31,7 @@ function Adm_Serv_add() {
       console.log("Please fill all the fields");
       toast.error("Please fill all the fields")
       return false;
-    } 
+    }
 
     const res = await axios.post("http://localhost:3000/services", service)
     redirect("/admin/services/mng")
@@ -43,7 +43,7 @@ function Adm_Serv_add() {
     })
     toast.success("Service Added Successfully")
   }
-    
+
   // CURD - Create, Update, Read, Delete
   // READ: GET- Read all items or single item
   // CREATE: POST - Create new item

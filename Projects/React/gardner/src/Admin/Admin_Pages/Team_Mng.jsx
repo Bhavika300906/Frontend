@@ -41,7 +41,7 @@ function Team_Mng() {
                                         <td>{data.name}</td>
                                         <td><img src={data.photo} alt="" width="50px" height="50px" /></td>
                                         <td>
-                                            <button className='btn btn-primary me-2'>Edit</button>
+                                            <button className='btn btn-primary me-2 '>Edit</button>
                                             <button className='btn btn-danger'>Delete</button>
                                         </td>
                                     </tr>
@@ -49,7 +49,6 @@ function Team_Mng() {
                             })}
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>

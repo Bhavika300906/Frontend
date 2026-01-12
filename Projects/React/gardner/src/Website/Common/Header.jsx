@@ -55,7 +55,7 @@ function Header() {
                             </div>
                             <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
                         </div>
-                        <a href className="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i className="fa fa-arrow-right ms-3" /></a>
+                        <a href className="btn btn-success py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i className="fa fa-arrow-right ms-3" /></a>
                     </div>
                 </nav>
                 {/* Navbar End */}

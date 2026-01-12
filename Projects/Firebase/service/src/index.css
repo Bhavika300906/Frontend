@@ -1,0 +1,235 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f6f8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  color: #111;
+}
+
+.add-btn {
+  padding: 10px 16px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background-color: #4338ca;
+}
+
+/* =========================
+   CATEGORY FILTER
+========================= */
+.category-filter {
+  margin-bottom: 20px;
+}
+
+.category-filter select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* =========================
+   SERVICES GRID
+========================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   SERVICE CARD
+========================= */
+.service-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.service-card h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* =========================
+   CARD ACTIONS
+========================= */
+.service-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.service-actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.service-actions .edit-btn {
+  background-color: #16a34a;
+  color: white;
+}
+
+.service-actions .edit-btn:hover {
+  background-color: #15803d;
+}
+
+.service-actions .delete-btn {
+  background-color: #dc2626;
+  color: white;
+}
+
+.service-actions .delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* =========================
+   MODAL (ADD / EDIT FORM)
+========================= */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* =========================
+   FORM
+========================= */
+.service-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-form h3 {
+  margin-bottom: 12px;
+}
+
+/* =========================
+   FORM GRID
+========================= */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.service-form input,
+.service-form select,
+.service-form textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.service-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* =========================
+   FORM BUTTONS
+========================= */
+.service-form .service-actions {
+  margin-top: 10px;
+}
+
+.service-form button {
+  padding: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

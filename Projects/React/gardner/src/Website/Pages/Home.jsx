@@ -13,7 +13,7 @@ function Home() {
                         <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img className="w-100" src="img/carousel-1.jpg" alt="Image" />
-                                <div className="carousel-caption lg-8">
+                                <div className="carousel-caption xl-8">
                                     <div className="container">
                                         <div className="row justify-content-center lg-8">
                                             <div className="col-lg-8">
@@ -38,7 +38,7 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                        <button className="carousel-control-prev p-4" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                             <span className="carousel-control-prev-icon" aria-hidden="true" />
                             <span className="visually-hidden">Previous</span>
                         </button>
@@ -57,7 +57,7 @@ function Home() {
                                 <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{ minHeight: 160 }}>
                                     <div className="d-flex">
                                         <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                            <i className="fa fa-times text-primary" />
+                                            <i className="fa fa-times text-success" />
                                         </div>
                                         <div className="ps-3">
                                             <h4>No Hidden Cost</h4>
@@ -70,7 +70,7 @@ function Home() {
                                 <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{ minHeight: 160 }}>
                                     <div className="d-flex">
                                         <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                            <i className="fa fa-users text-primary" />
+                                            <i className="fa fa-users text-success" />
                                         </div>
                                         <div className="ps-3">
                                             <h4>Dedicated Team</h4>
@@ -83,7 +83,7 @@ function Home() {
                                 <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{ minHeight: 160 }}>
                                     <div className="d-flex">
                                         <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                            <i className="fa fa-phone text-primary" />
+                                            <i className="fa fa-phone text-success" />
                                         </div>
                                         <div className="ps-3">
                                             <h4>24/7 Available</h4>
@@ -108,7 +108,7 @@ function Home() {
                                 <p className="text-primary mb-4">Year of Experience</p>
                                 <h1 className="display-5 mb-4">We Make Your Home Like A Garden</h1>
                                 <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                <a className="btn btn-primary py-3 px-4" href>Explore More</a>
+                                <a className="btn btn-success py-3 px-4" href>Explore More</a>
                             </div>
                             <div className="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                                 <div className="row g-5">
@@ -121,7 +121,7 @@ function Home() {
                                     </div>
                                     <div className="col-12 col-sm-6 col-lg-12">
                                         <div className="border-start ps-4">
-                                            <i className="fa fa-users fa-3x text-primary mb-3" />
+                                            <i className="fa fa-users fa-3x text-success mb-3" />
                                             <h4 className="mb-3">Dedicated Team</h4>
                                             <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</span>
                                         </div>
@@ -164,7 +164,7 @@ function Home() {
                                 <p className="fs-5 fw-bold text-primary">Why Choosing Us!</p>
                                 <h1 className="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
                                 <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                <a className="btn btn-primary py-3 px-4" href>Explore More</a>
+                                <a className="btn btn-success py-3 px-4" href>Explore More</a>
                             </div>
                             <div className="col-lg-6">
                                 <div className="row g-4 align-items-center">
@@ -173,7 +173,7 @@ function Home() {
                                             <div className="col-12 wow fadeIn" data-wow-delay="0.3s">
                                                 <div className="text-center rounded py-5 px-4" style={{ boxShadow: '0 0 45px rgba(0,0,0,.08)' }}>
                                                     <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{ width: 90, height: 90 }}>
-                                                        <i className="fa fa-check fa-3x text-primary" />
+                                                        <i className="fa fa-check fa-3x text-success" />
                                                     </div>
                                                     <h4 className="mb-0">100% Satisfaction</h4>
                                                 </div>
@@ -181,7 +181,7 @@ function Home() {
                                             <div className="col-12 wow fadeIn" data-wow-delay="0.5s">
                                                 <div className="text-center rounded py-5 px-4" style={{ boxShadow: '0 0 45px rgba(0,0,0,.08)' }}>
                                                     <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{ width: 90, height: 90 }}>
-                                                        <i className="fa fa-users fa-3x text-primary" />
+                                                        <i className="fa fa-users fa-3x text-success" />
                                                     </div>
                                                     <h4 className="mb-0">Dedicated Team</h4>
                                                 </div>
@@ -191,7 +191,7 @@ function Home() {
                                     <div className="col-md-6 wow fadeIn" data-wow-delay="0.7s">
                                         <div className="text-center rounded py-5 px-4" style={{ boxShadow: '0 0 45px rgba(0,0,0,.08)' }}>
                                             <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{ width: 90, height: 90 }}>
-                                                <i className="fa fa-tools fa-3x text-primary" />
+                                                <i className="fa fa-tools fa-3x text-success" />
                                             </div>
                                             <h4 className="mb-0">Modern Equipment</h4>
                                         </div>
@@ -206,7 +206,7 @@ function Home() {
                 <div className="container-xxl py-5">
                     <div className="container">
                         <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: 500 }}>
-                            <p className="fs-5 fw-bold text-primary">Our Services</p>
+                            <p className="fs-5 fw-bold text-success">Our Services</p>
                             <h1 className="display-5 mb-5">Services That We Offer For You</h1>
                         </div>
                         <div className="row g-4">
@@ -221,7 +221,7 @@ function Home() {
                                         </div>
                                         <h4 className="mb-3">Landscaping</h4>
                                         <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                        <a className="btn btn-sm" href><i className="fa fa-plus text-primary me-2" />Read More</a>
+                                        <a className="btn btn-sm" href><i className="fa fa-plus text-success me-2" />Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +236,7 @@ function Home() {
                                         </div>
                                         <h4 className="mb-3">Pruning plants</h4>
                                         <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                        <a className="btn btn-sm" href><i className="fa fa-plus text-primary me-2" />Read More</a>
+                                        <a className="btn btn-sm" href><i className="fa fa-plus text-success me-2" />Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -251,7 +251,7 @@ function Home() {
                                         </div>
                                         <h4 className="mb-3">Irrigation &amp; Drainage</h4>
                                         <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                        <a className="btn btn-sm" href><i className="fa fa-plus text-primary me-2" />Read More</a>
+                                        <a className="btn btn-sm" href><i className="fa fa-plus text-success me-2" />Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@ function Home() {
                                         </div>
                                         <h4 className="mb-3">Garden Maintenance </h4>
                                         <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                        <a className="btn btn-sm" href><i className="fa fa-plus text-primary me-2" />Read More</a>
+                                        <a className="btn btn-sm" href><i className="fa fa-plus text-success me-2" />Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +281,7 @@ function Home() {
                                         </div>
                                         <h4 className="mb-3">Green Technology</h4>
                                         <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                        <a className="btn btn-sm" href><i className="fa fa-plus text-primary me-2" />Read More</a>
+                                        <a className="btn btn-sm" href><i className="fa fa-plus text-success me-2" />Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -296,7 +296,7 @@ function Home() {
                                         </div>
                                         <h4 className="mb-3">Urban Gardening</h4>
                                         <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                                        <a className="btn btn-sm" href><i className="fa fa-plus text-primary me-2" />Read More</a>
+                                        <a className="btn btn-sm" href><i className="fa fa-plus text-success me-2" />Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -343,7 +343,7 @@ function Home() {
                                             </div>
                                         </div>
                                         <div className="col-12 text-center">
-                                            <button className="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
+                                            <button className="btn btn-success py-3 px-4" type="submit">Submit Now</button>
                                         </div>
                                     </div>
                                 </div>
