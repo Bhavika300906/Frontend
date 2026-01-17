@@ -5,12 +5,12 @@ function AddService({ closeForm }) {
   const { addService } = useService();
 
   const [form, setForm] = useState({
-    name: "",
-    price: "",
-    category: "",
-    duration: "",
-    image: "",
-    description: ""
+    Name: "",
+    Price: "",
+    Category: "",
+    Duration: "",
+    Image: "",
+    Description: ""
   });
 
   const handleChange = e =>
@@ -25,6 +25,9 @@ function AddService({ closeForm }) {
   return (
     <div className="modal">
       <form className="service-form" onSubmit={handleSubmit}>
+        addService(form);
+        closeForm();
+
         <h3>Add Service</h3>
 
         <div className="form-grid">

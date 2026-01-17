@@ -8,60 +8,123 @@ import {
     updateDoc
 } from "firebase/firestore";
 import { fireDb } from "../Firebase/Firebase";
+import { toast } from "react-toastify";
 
-/* 🌍 CONTEXT */
+
+/* =========================
+   CONTEXT CREATION
+========================= */
 const ServiceContext = createContext();
 
-/* 🧠 PROVIDER */
+/* =========================
+   PROVIDER
+========================= */
 export function ServiceProvider({ children }) {
 
-    /* ✅ STATES */
+    /* 🔹 STATES */
     const [services, setServices] = useState([]);
     const [category, setCategory] = useState("All");
     const [editService, setEditService] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-    /* 🔄 READ */
+    /* =========================
+       READ (FETCH ALL SERVICES)
+    ========================= */
     const fetchServices = async () => {
-        const snapshot = await getDocs(collection(fireDb, "services"));
-        const data = snapshot.docs.map(docu => ({
-            id: docu.id,
-            ...docu.data()
-        }));
-        setServices(data);
+        try {
+            const snapshot = await getDocs(collection(fireDb, "Services"));
+
+            const data = snapshot.docs.map(docu => {
+                const d = docu.data();
+
+                return {
+                    id: docu.id,
+
+                    // 🔥 normalize fields (THIS IS THE KEY)
+                    name: d.name || d.Name || "",
+                    price: d.price || d.Price || "",
+                    category: d.category || d.Category || "",
+                    duration: d.duration || d.Duration || "",
+                    image: d.image || d.Image || "",
+                    description: d.description || d.Description || "",
+                    status: d.status || "active"
+                };
+            });
+
+            setServices(data);
+        } catch (err) {
+            console.error("Fetch error:", err);
+        }
     };
 
-    /* ➕ CREATE */
+    /* =========================
+       CREATE (ADD SERVICE)
+    ========================= */
     const addService = async (serviceData) => {
-        await addDoc(collection(fireDb, "services"), {
-            ...serviceData,
-            status: "active",
-            time: new Date()
-        });
-        fetchServices();
+        try {
+            await addDoc(collection(fireDb, "Services"), {
+                ...serviceData,
+                status: "active",
+                createdAt: new Date()
+            });
+
+            toast.success("Service added successfully ✅");
+            fetchServices();
+        } catch (error) {
+            toast.error("Failed to add service ❌");
+            console.error(error);
+        }
     };
 
-    /* ❌ DELETE */
+
+    /* =========================
+       DELETE SERVICE
+    ========================= */
     const deleteService = async (id) => {
-        await deleteDoc(doc(fireDb, "services", id));
-        fetchServices();
+        try {
+            await deleteDoc(doc(fireDb, "Services", id));
+
+            toast.success("Service deleted successfully 🗑️");
+            fetchServices();
+        } catch (error) {
+            toast.error("Failed to delete service ❌");
+            console.error(error);
+        }
     };
 
-    /* ✏️ UPDATE */
+
+    /* =========================
+       UPDATE SERVICE
+    ========================= */
     const updateService = async (id, updatedData) => {
-        await updateDoc(doc(fireDb, "services", id), updatedData);
-        fetchServices();
-        setEditService(null);
+        try {
+            await updateDoc(doc(fireDb, "Services", id), updatedData);
+
+            toast.success("Service updated successfully ✏️");
+            fetchServices();
+            setEditService(null);
+        } catch (error) {
+            toast.error("Failed to update service ❌");
+            console.error(error);
+        }
     };
 
+
+    /* =========================
+       INITIAL FETCH
+    ========================= */
     useEffect(() => {
         fetchServices();
     }, []);
 
-    /* ✅ RETURN MUST BE INSIDE FUNCTION */
+    /* =========================
+       PROVIDER RETURN
+    ========================= */
     return (
         <ServiceContext.Provider
             value={{
                 services,
+                loading,
                 category,
                 setCategory,
                 addService,
@@ -76,5 +139,7 @@ export function ServiceProvider({ children }) {
     );
 }
 
-/* 🔥 CUSTOM HOOK */
+/* =========================
+   CUSTOM HOOK
+========================= */
 export const useService = () => useContext(ServiceContext);
