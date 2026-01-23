@@ -1,5 +1,6 @@
 import { useService } from "../context/ServiceContext";
 
+
 function CategoryFilter() {
   const { category, setCategory } = useService();
 

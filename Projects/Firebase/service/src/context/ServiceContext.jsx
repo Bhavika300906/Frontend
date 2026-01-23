@@ -11,14 +11,14 @@ import { fireDb } from "../Firebase/Firebase";
 import { toast } from "react-toastify";
 
 
-/* =========================
+/* 
    CONTEXT CREATION
-========================= */
+ */
 const ServiceContext = createContext();
 
-/* =========================
+/* 
    PROVIDER
-========================= */
+ */
 export function ServiceProvider({ children }) {
 
     /* 🔹 STATES */
@@ -27,9 +27,9 @@ export function ServiceProvider({ children }) {
     const [editService, setEditService] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    /* =========================
+    /* 
        READ (FETCH ALL SERVICES)
-    ========================= */
+     */
     const fetchServices = async () => {
         try {
             const snapshot = await getDocs(collection(fireDb, "Services"));
@@ -57,9 +57,9 @@ export function ServiceProvider({ children }) {
         }
     };
 
-    /* =========================
+    /* 
        CREATE (ADD SERVICE)
-    ========================= */
+    */
     const addService = async (serviceData) => {
         try {
             await addDoc(collection(fireDb, "Services"), {
@@ -77,9 +77,9 @@ export function ServiceProvider({ children }) {
     };
 
 
-    /* =========================
+    /* 
        DELETE SERVICE
-    ========================= */
+     */
     const deleteService = async (id) => {
         try {
             await deleteDoc(doc(fireDb, "Services", id));
@@ -93,9 +93,9 @@ export function ServiceProvider({ children }) {
     };
 
 
-    /* =========================
+    /* 
        UPDATE SERVICE
-    ========================= */
+     */
     const updateService = async (id, updatedData) => {
         try {
             await updateDoc(doc(fireDb, "Services", id), updatedData);
@@ -110,16 +110,16 @@ export function ServiceProvider({ children }) {
     };
 
 
-    /* =========================
+    /* 
        INITIAL FETCH
-    ========================= */
+    */
     useEffect(() => {
         fetchServices();
     }, []);
 
-    /* =========================
+    /* 
        PROVIDER RETURN
-    ========================= */
+    */
     return (
         <ServiceContext.Provider
             value={{
@@ -139,7 +139,7 @@ export function ServiceProvider({ children }) {
     );
 }
 
-/* =========================
+/*
    CUSTOM HOOK
-========================= */
+ */
 export const useService = () => useContext(ServiceContext);
