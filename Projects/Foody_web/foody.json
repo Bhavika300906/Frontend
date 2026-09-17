@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Tomato",
+            "price": "23",
+            "category": "vegetables",
+            "img": "https://cdn.zeptonow.com/production/ik-seo/tr:w-403,ar-739-739,pr-true,f-auto,q-40,dpr-2/cms/product_variant/bc32ce39-aa9d-4f9a-8c71-33aedd4da0d0/Organically-Grown-Tomato-Local.png"
+        },
+        {
+            "id": "2",
+            "name": "Potato vegi",
+            "price": "17",
+            "category": "vegetables",
+            "img": "https://cdn.zeptonow.com/production/ik-seo/tr:w-403,ar-883-883,pr-true,f-auto,q-40,dpr-2/cms/product_variant/4d70541e-9299-4497-acc0-e402c64aefbe/Organically-Grown-Potato.png"
+        },
+        {
+            "id": "9KWUwEB0684",
+            "name": "Dragon Red",
+            "price": "20",
+            "category": "fruits",
+            "img": "https://cdn.zeptonow.com/production/ik-seo/tr:w-470,ar-3000-3000,pr-true,f-auto,q-40,dpr-2/cms/product_variant/f8263004-d030-47c4-91d7-64e68d4ff2f0/Dragon-Fruit-Red.jpg"
+        },
+        {
+            "id": "2sBMi2cX-FQ",
+            "name": "Guava Indian",
+            "price": "12",
+            "category": "fruits",
+            "img": "https://cdn.zeptonow.com/production/ik-seo/tr:w-470,ar-3000-3000,pr-true,f-auto,q-40,dpr-2/cms/product_variant/bef41aa6-5251-407a-82e8-d5fbe90f4713/Guava-Indian.jpeg"
+        }
+    ]
+}

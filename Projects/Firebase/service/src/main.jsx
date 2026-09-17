@@ -1,18 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
-import { ServiceProvider } from "./context/ServiceContext";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import 'react-toastify/dist/ReactToastify.css';
 
-/* 🔔 Toast */
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ServiceProvider>
-      <App />
-      <ToastContainer position="top-right" autoClose={2000} />
-    </ServiceProvider>
-  </React.StrictMode>
+    <App />
+  </React.StrictMode>,
 );

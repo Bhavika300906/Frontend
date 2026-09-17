@@ -1,145 +1,74 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import {
-    collection,
-    addDoc,
-    getDocs,
-    deleteDoc,
-    doc,
-    updateDoc
-} from "firebase/firestore";
-import { fireDb } from "../Firebase/Firebase";
-import { toast } from "react-toastify";
+import React, { createContext, useState, useEffect, useContext } from 'react';
+import { db } from '../Firebase/Firebase';
+import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 
-
-/* 
-   CONTEXT CREATION
- */
 const ServiceContext = createContext();
 
-/* 
-   PROVIDER
- */
-export function ServiceProvider({ children }) {
+export const useServices = () => useContext(ServiceContext);
 
-    /* 🔹 STATES */
-    const [services, setServices] = useState([]);
-    const [category, setCategory] = useState("All");
-    const [editService, setEditService] = useState(null);
-    const [loading, setLoading] = useState(true);
+export const ServiceProvider = ({ children }) => {
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  // FIX 1: Change "services" to "Services" (Capital S)
+  const servicesCollectionRef = collection(db, "Services");
 
-    /* 
-       READ (FETCH ALL SERVICES)
-     */
-    const fetchServices = async () => {
-        try {
-            const snapshot = await getDocs(collection(fireDb, "Services"));
+  const getServices = async () => {
+    setLoading(true);
+    try {
+      const data = await getDocs(servicesCollectionRef);
+      setServices(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    } catch (err) {
+      console.error(err);
+      toast.error("Error fetching data!");
+    }
+    setLoading(false);
+  };
 
-            const data = snapshot.docs.map(docu => {
-                const d = docu.data();
+  const addService = async (newService) => {
+    try {
+      await addDoc(servicesCollectionRef, newService);
+      getServices();
+      toast.success("Service Added Successfully!");
+    } catch (err) {
+      toast.error("Failed to add service.");
+    }
+  };
 
-                return {
-                    id: docu.id,
+  const deleteService = async (id) => {
+    if (window.confirm("Are you sure you want to delete this?")) {
+      try {
+        // FIX 2: Change "services" to "Services" here too
+        const serviceDoc = doc(db, "Services", id);
+        await deleteDoc(serviceDoc);
+        getServices();
+        toast.info("Service Deleted");
+      } catch (err) {
+        toast.error("Failed to delete.");
+      }
+    }
+  };
 
-                    // 🔥 normalize fields (THIS IS THE KEY)
-                    name: d.name || d.Name || "",
-                    price: d.price || d.Price || "",
-                    category: d.category || d.Category || "",
-                    duration: d.duration || d.Duration || "",
-                    image: d.image || d.Image || "",
-                    description: d.description || d.Description || "",
-                    status: d.status || "active"
-                };
-            });
+  const updateService = async (id, updatedService) => {
+    try {
+      // FIX 3: And here
+      const serviceDoc = doc(db, "Services", id);
+      await updateDoc(serviceDoc, updatedService);
+      getServices();
+      toast.success("Service Updated!");
+    } catch (err) {
+      toast.error("Update failed.");
+    }
+  };
 
-            setServices(data);
-        } catch (err) {
-            console.error("Fetch error:", err);
-        }
-    };
+  useEffect(() => {
+    getServices();
+  }, []);
 
-    /* 
-       CREATE (ADD SERVICE)
-    */
-    const addService = async (serviceData) => {
-        try {
-            await addDoc(collection(fireDb, "Services"), {
-                ...serviceData,
-                status: "active",
-                createdAt: new Date()
-            });
-
-            toast.success("Service added successfully ✅");
-            fetchServices();
-        } catch (error) {
-            toast.error("Failed to add service ❌");
-            console.error(error);
-        }
-    };
-
-
-    /* 
-       DELETE SERVICE
-     */
-    const deleteService = async (id) => {
-        try {
-            await deleteDoc(doc(fireDb, "Services", id));
-
-            toast.success("Service deleted successfully 🗑️");
-            fetchServices();
-        } catch (error) {
-            toast.error("Failed to delete service ❌");
-            console.error(error);
-        }
-    };
-
-
-    /* 
-       UPDATE SERVICE
-     */
-    const updateService = async (id, updatedData) => {
-        try {
-            await updateDoc(doc(fireDb, "Services", id), updatedData);
-
-            toast.success("Service updated successfully ✏️");
-            fetchServices();
-            setEditService(null);
-        } catch (error) {
-            toast.error("Failed to update service ❌");
-            console.error(error);
-        }
-    };
-
-
-    /* 
-       INITIAL FETCH
-    */
-    useEffect(() => {
-        fetchServices();
-    }, []);
-
-    /* 
-       PROVIDER RETURN
-    */
-    return (
-        <ServiceContext.Provider
-            value={{
-                services,
-                loading,
-                category,
-                setCategory,
-                addService,
-                deleteService,
-                updateService,
-                editService,
-                setEditService
-            }}
-        >
-            {children}
-        </ServiceContext.Provider>
-    );
-}
-
-/*
-   CUSTOM HOOK
- */
-export const useService = () => useContext(ServiceContext);
+  return (
+    <ServiceContext.Provider value={{ services, loading, addService, deleteService, updateService }}>
+      {children}
+    </ServiceContext.Provider>
+  );
+};

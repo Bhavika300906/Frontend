@@ -1,63 +1,90 @@
-import { useState } from "react";
-import { useService } from "../context/ServiceContext";
+import React, { useState } from 'react';
+import { useServices } from '../context/ServiceContext';
+import { useNavigate } from 'react-router-dom';
+import { MDBInput, MDBBtn, MDBCard, MDBCardBody, MDBTextArea } from 'mdb-react-ui-kit';
 
-function AddService({ closeForm }) {
-  const { addService } = useService();
+const AddService = () => {
+  const [service, setService] = useState({ Name: '', Description: '', Price: '', Category: '', Image: '' });
+  const { addService } = useServices();
+  const navigate = useNavigate();
 
-  const [form, setForm] = useState({
-    Name: "",
-    Price: "",
-    Category: "",
-    Duration: "",
-    Image: "",
-    Description: ""
-  });
-
-  const handleChange = e =>
-    setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    addService(form);
-    closeForm();
+    await addService({
+        Name: service.Name,
+        Description: service.Description,
+        Category: service.Category,
+        Price: service.Price,
+        Image: service.Image // Now just saving the link directly
+    });
+    navigate('/');
   };
 
   return (
-    <div className="modal">
-      <form className="service-form" onSubmit={handleSubmit}>
-        addService(form);
-        closeForm();
+    <div className="d-flex justify-content-center mt-5">
+      <MDBCard style={{ maxWidth: '500px', width: '100%' }}>
+        <MDBCardBody>
+          <h3 className="text-center mb-4">Add New Service</h3>
+          <form onSubmit={handleSubmit}>
+            <MDBInput 
+              label='Service Name' 
+              type='text' 
+              className='mb-3'
+              value={service.Name}
+              onChange={(e) => setService({...service, Name: e.target.value})}
+              required
+            />
+            <MDBInput 
+              label='Category' 
+              type='text' 
+              className='mb-3'
+              value={service.Category}
+              onChange={(e) => setService({...service, Category: e.target.value})}
+            />
+            <MDBTextArea 
+              label='Description' 
+              rows={3} 
+              className='mb-3'
+              value={service.Description}
+              onChange={(e) => setService({...service, Description: e.target.value})}
+            />
+            <MDBInput 
+              label='Price' 
+              type='number' 
+              className='mb-3'
+              value={service.Price}
+              onChange={(e) => setService({...service, Price: e.target.value})}
+              required
+            />
+            
+            {/* Image Link Input */}
+            <MDBInput 
+              label='Image URL (Paste Link Here)' 
+              type='text' 
+              className='mb-3'
+              value={service.Image}
+              onChange={(e) => setService({...service, Image: e.target.value})}
+              placeholder="https://example.com/my-image.jpg"
+            />
 
-        <h3>Add Service</h3>
+            {/* Live Preview */}
+            {service.Image && (
+              <div className="mb-3 text-center">
+                <img 
+                  src={service.Image} 
+                  alt="Preview" 
+                  style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '5px' }} 
+                  onError={(e) => e.target.style.display = 'none'} // Hides if link is broken
+                />
+              </div>
+            )}
 
-        <div className="form-grid">
-          <input name="name" placeholder="Name" onChange={handleChange} required />
-          <input name="price" placeholder="Price" onChange={handleChange} required />
-
-          <select name="category" onChange={handleChange} required>
-            <option value="">Select Category</option>
-            <option value="IT Services">IT Services</option>
-          </select>
-
-          <input name="duration" placeholder="Duration" onChange={handleChange} />
-          <input name="image" placeholder="Image URL" onChange={handleChange} />
-        </div>
-
-        <textarea
-          name="description"
-          placeholder="Description"
-          onChange={handleChange}
-        />
-
-        <div className="service-actions">
-          <button type="submit" className="edit-btn">Save</button>
-          <button type="button" className="delete-btn" onClick={closeForm}>
-            Cancel
-          </button>
-        </div>
-      </form>
+            <MDBBtn type="submit" block>Add Service</MDBBtn>
+          </form>
+        </MDBCardBody>
+      </MDBCard>
     </div>
   );
-}
+};
 
 export default AddService;

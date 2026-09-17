@@ -1,18 +1,27 @@
-import { useService } from "../context/ServiceContext";
+import React from 'react';
+import { MDBBtn, MDBBtnGroup } from 'mdb-react-ui-kit';
 
-
-function CategoryFilter() {
-  const { category, setCategory } = useService();
+const CategoryFilter = ({ services, currentCategory, onSelectCategory }) => {
+  // 1. Get unique categories from the services list
+  // We add 'All' at the start manually
+  const categories = ['All', ...new Set(services.map(s => s.Category).filter(c => c))];
 
   return (
-    <div className="category-filter">
-      <select value={category} onChange={e => setCategory(e.target.value)}>
-        <option value="All">All</option>
-        <option value="IT Services">IT Services</option>
-        
-      </select>
+    <div className="d-flex justify-content-center mb-4">
+      <MDBBtnGroup shadow='0'>
+        {categories.map((category, index) => (
+          <MDBBtn
+            key={index}
+            color={currentCategory === category ? 'primary' : 'light'} // Highlight active button
+            onClick={() => onSelectCategory(category)}
+            style={{ textTransform: 'capitalize' }}
+          >
+            {category}
+          </MDBBtn>
+        ))}
+      </MDBBtnGroup>
     </div>
   );
-}
+};
 
 export default CategoryFilter;

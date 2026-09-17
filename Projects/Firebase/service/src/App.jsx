@@ -1,28 +1,51 @@
-import { useState } from "react";
-import ServiceList from "./components/ServiceList";
-import AddService from "./components/AddService";
-import EditService from "./components/EditService";
-import CategoryFilter from "./components/CategoryFilter";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { ServiceProvider } from './context/ServiceContext';
+import { ToastContainer } from 'react-toastify';
+import { MDBNavbar, MDBContainer, MDBNavbarBrand, MDBBtn } from 'mdb-react-ui-kit';
 
+import ServiceList from './components/ServiceList';
+import AddService from './components/AddService';
+import EditService from './components/EditService';
 
 function App() {
-  const [showAddForm, setShowAddForm] = useState(false);
-
   return (
-    <div className="app-container">
-      <div className="app-header">
-        <h1>Services</h1>
-        <button className="add-btn" onClick={() => setShowAddForm(true)}>
-          + Add Service
-        </button>
-      </div>
+    <ServiceProvider>
+      <Router>
+        {/* Navigation Bar */}
+        <MDBNavbar expand='lg' light bgColor='light' className='shadow-sm'>
+          <MDBContainer fluid>
+            <MDBNavbarBrand href='#' className='fw-bold text-primary'>
+              <i className="fas fa-tools me-2"></i> Services Manager
+            </MDBNavbarBrand>
+            <div>
+              <Link to="/">
+                <MDBBtn outline color='primary' className='me-2'>
+                  <i className="fas fa-home me-1"></i> Home
+                </MDBBtn>
+              </Link>
+              <Link to="/add">
+                <MDBBtn color='primary'>
+                  <i className="fas fa-plus me-1"></i> Add Service
+                </MDBBtn>
+              </Link>
+            </div>
+          </MDBContainer>
+        </MDBNavbar>
 
-      <CategoryFilter />
-      <ServiceList />
+        {/* Routes */}
+        <MDBContainer className="mt-4">
+          <Routes>
+            <Route path="/" element={<ServiceList />} />
+            <Route path="/add" element={<AddService />} />
+            <Route path="/edit/:id" element={<EditService />} />
+          </Routes>
+        </MDBContainer>
 
-      {showAddForm && <AddService closeForm={() => setShowAddForm(false)} />}
-      <EditService />
-    </div>
+        {/* Toast Notification Container */}
+        <ToastContainer position="top-right" autoClose={3000} />
+      </Router>
+    </ServiceProvider>
   );
 }
 
